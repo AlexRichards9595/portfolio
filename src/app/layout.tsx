@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex grow min-h-screen`}>
+      <body className={`${inter.className} flex flex-row h-screen overflow-y-hidden`}>
       <Sidebar/>
-      {children}
+      <div className={'max-h-screen overflow-y-auto'}>{children}</div>
       </body>
     </html>
   );
