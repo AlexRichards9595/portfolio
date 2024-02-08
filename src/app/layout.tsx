@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} flex flex-row h-screen overflow-y-hidden`}>
       <Sidebar/>
-      <div className={'max-h-screen overflow-y-auto'}>{children}</div>
+      <div className={'max-h-screen w-5/6 overflow-y-auto grow'}>{children}</div>
       </body>
     </html>
   );
