@@ -7,7 +7,7 @@ import Image from "next/image";
 const BottomDrawer = () => {
   const [open, setOpen] = useState(false)
   return (
-      <div className={'h-12 w-screen lg:hidden border-t-2'}>
+      <div className={'h-12 w-screen lg:hidden border-t-2 sticky'}>
         <div className={'flex items-center justify-center h-full w-full'} onClick={() => setOpen(true)}>
           <Image className={'w-8 h-8'} src={'/icon-menu-open.png'} alt={'Arrow'} height={50} width={50}/>
         </div>

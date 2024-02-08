@@ -1,8 +1,9 @@
 'use client'
 
 import {
-    Drawer
+    Drawer,
+    Carousel
 } from '@material-tailwind/react'
 
-export { Drawer
+export { Drawer, Carousel
 };
