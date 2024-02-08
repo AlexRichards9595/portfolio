@@ -4,38 +4,44 @@ export interface Company {
   time: string;
   src: string;
   description: string;
-  technologies: string;
+  bullets: string[];
+  technologies: string[];
 }
 
 
 export const employerData: Company[] = [
   {
-    name: "eFuse",
-    time: "2022-present",
+    name: "Northwoods",
+    time: "2023-present",
     src: "/efuse.png",
-    description: `Worked on a small team to develop features for the eRena product which is a tool for eSport tournament operators to manage and run tournaments. These features included team and player application management, bracket creation and management and tournament scoring. Some of the the major contributions I made here were implementing graphQL and Apollo best practices and splitting large, top level, calls into smaller calls closer to where the data was needed, reducing page load times down from ~6 seconds to under a second; fixing over 1000 TS errors to enable our team to turn Strict Mode on to improve and ensure code stability and maintainability; I also researched, discovered and implemented CodeGen into our stack to help maintain type safety across our tech stack.`,
-    technologies: "NextJS, React, Typescript, GraphQL, Apollo, MongoDB, TypeGoose, RTL, Jest"
+    description: `Implement Dark Mode feature in mobile application using new styling library, ensuring seamless integration and consistent color themes throughout interface. Utilize Styled Components library to enforce uniform styling and facilitate color theming across application codebase.`,
+    bullets: ['Enhanced team productivity by 30% through optimizing individual contributions and streamlining work cycles for improved efficiency.', 'Revamped app\'s navigation structure, significantly reducing screen loading time from 20 seconds to less than 1 second, enhancing user experience and overall performance'],
+    technologies: ['NextJS', 'React', 'Typescript', 'GraphQL', 'Apollo', 'MongoDB', 'TypeGoose', 'RTL', 'Jest']
   },
   {
-    name: "Dwell",
-    time: "2019-2022",
-    src: "/Dwell-Sunburst-Light.png",
-    description: "Provided technical guidance and development for transitioning from current PHP frontend to a single page application using a modern JS framework",
-    technologies: "NextJS, React, Typescript, PHP, MUI, RTL, Jest"
+    name: "eFuse",
+    time: "2022-2023",
+    src: "/efuse.png",
+    description: `Implemented Codegen to automatically generate Types, ensuring type safety from front-end to backend systems, fortifying application's integrity. Spearheaded standardization of unit testing methodologies and mentored junior engineers' ineffective unit testing practices, fostering culture of quality assurance and continuous improvement within team.`,
+    bullets: ['Achieved 86% reduction in page load times by implementing industry-leading GraphQL best practices.', 'Rectified 1000+ Typescript errors, enabling activation of Strict Mode to uphold code stability and bolster maintainability across project.', 'Optimized data fetching methods, resulting in substantial decrease in page load time from 6 seconds to under 1 second, enhancing overall\n' +
+    'application responsiveness.'],
+    technologies: ['NextJS', 'React', 'Typescript', 'GraphQL', 'Apollo', 'MongoDB', 'TypeGoose', 'RTL', 'Jest']
   },
   {
     name: "Accenture",
     time: "2019-2022",
     src: "/Accenture-Logo.png",
-    description: "Worked on various projects that included building new products, fixing and improving existing projects, and consulting on team and engineering practices",
-    technologies: "React, Angular, Python, Go, Java, C#"
+    description: "Developed purchasing flow for United Airlines' onboard WiFi using React, enhancing user experience and facilitating seamless transactions. Led planning and execution of Angular green field project, establishing web portal for Ford Motor Company's employees to access their machine learning toolbox, streamlining internal processes and empowering users.",
+    bullets: [`Spearheaded front-end development of purchasing flow for United Airlines' onboard WiFi, ensuring intuitive design and functionality to meet needs of travelers.`, `Designed user-friendly interface for Ford\'s Sales team to access machine learning tools, enabling efficient data-driven decision-making and enhancing productivity within organization.`],
+    technologies: ['React', 'Angular', 'Python', 'Go', 'Java', 'C#']
   },
   {
     name: "NetJets",
     time: "2018-2019",
     src: "/netjets-vector-logo.png",
-    description: "Scoped out and developed multiple ServiceNow projects for internal business users",
-    technologies: "Angular, ServiceNow"
+    description: "Scoped and executed various ServiceNow projects tailored to meet specific needs of internal business users, enhancing operational efficiency and workflow management within organization.",
+    bullets: [],
+    technologies: ['Angular', 'ServiceNow']
   }
 ];
 

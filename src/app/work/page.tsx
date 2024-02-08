@@ -1,39 +1,25 @@
-'use client'
 import {employerData} from "@/ExperienceData";
-import {
-  Accordion, AccordionBody, AccordionHeader,
-  Timeline, TimelineConnector, TimelineHeader, TimelineIcon, TimelineItem,
-} from "@/components/MaterialTailwind";
+import React from "react";
 import Image from "next/image";
-import React, {useState} from "react";
 const Work = ()=> {
-  const [companySelected, setCompanySelected] = useState('')
-
-  const handleCompanyClick = (companyName: string) => {
-    setCompanySelected(prevState => (prevState === companyName ? '' : companyName))
-  }
   return (
-      <div className="w-1/2 mx-auto pt-8">
-        <Timeline>
+      <div className="flex flex-row h-full w-1/2 mx-auto pt-8">
+        <div className={'flex flex-col items-center h-5/6 w-48 mr-4'}>
+          <Image src={'/icon-arrow-up.png'} alt={'Arrow'} height={50} width={50}/>
+          <span className={'w-[2px] bg-lightest h-full'}/>
+          <span className={'mt-4 bg-lightest h-4 w-4 rounded-full'}/>
+        </div>
+        <div className={'flex flex-col h-5/6 py-4 justify-between'}>
           {employerData.map(company => (
-            <TimelineItem key={company.name} className={'min-h-48'}>
-              <TimelineConnector className={`${companySelected === company.name && 'hidden'}`}/>
-              <TimelineHeader>
-                <TimelineIcon className={'flex justify-center items-center bg-white h-16 w-16'}>
-                  <Image className={'object-contain'} src={company.src} alt={company.name} width={64} height={64}/>
-                </TimelineIcon>
-                <Accordion open={companySelected === company.name} placeholder={undefined}>
-                  <AccordionHeader onClick={() => handleCompanyClick(company.name)} placeholder={undefined}>
-                    <p className={'text-2xl text-white'}>{company.name}</p>
-                  </AccordionHeader>
-                  <AccordionBody>
-                    <p className={'text-lg text-white'}>{company.description}</p>
-                  </AccordionBody>
-                </Accordion>
-              </TimelineHeader>
-            </TimelineItem>
+              <div key={company.name} className={'flex flex-col py-4 px-8 bg-secondary rounded-2xl my-6 w-4/5'}>
+                <div className={'flex flex-row justify-between items-end mb-4'}>
+                  <p className={'text-2xl'}>{company.name}</p>
+                  <p className={'text-lightest'}>{company.time}</ p>
+                </div>
+                <p>{company.description}</p>
+              </div>
           ))}
-        </Timeline>
+        </div>
       </div>
   );
 }
