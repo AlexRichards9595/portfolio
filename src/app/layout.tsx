@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}`}>
-        <main className={'flex flex-col h-screen'}>
+        <main className={'flex flex-col h-screen overflow-x-hidden'}>
           <Link href={'/'}>
             <Image src={'/logo.svg'} className={'w-16 h-16 my-2 mx-auto lg:hidden'} width={400} height={400} alt={'Logo'}/>
           </Link>
