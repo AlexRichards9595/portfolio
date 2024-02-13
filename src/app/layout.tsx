@@ -23,7 +23,7 @@ export default function RootLayout({
           <header className={'sticky'}>
             <Header/>
           </header>
-          <main className={'w-screen grow lg:flex lg:flex-row overflow-y-auto pb-4'}>
+          <main className={'w-screen grow lg:flex lg:flex-row overflow-y-auto pb-16 lg:pb-0'}>
             <Sidebar/>
             <div className={'lg:w-screen lg:overflow-y-auto lg:grow'}>{children}</div>
           </main>
