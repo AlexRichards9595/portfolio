@@ -6,6 +6,7 @@ export interface Company {
   description: string;
   bullets: string[];
   technologies: string[];
+  link?: string;
 }
 
 
@@ -16,7 +17,8 @@ export const employerData: Company[] = [
     src: "/efuse.png",
     description: `Implement Dark Mode feature in mobile application using new styling library, ensuring seamless integration and consistent color themes throughout interface. Utilize Styled Components library to enforce uniform styling and facilitate color theming across application codebase.`,
     bullets: ['Enhanced team productivity by 30% through optimizing individual contributions and streamlining work cycles for improved efficiency.', 'Revamped app\'s navigation structure, significantly reducing screen loading time from 20 seconds to less than 1 second, enhancing user experience and overall performance'],
-    technologies: ['NextJS', 'React', 'Typescript', 'GraphQL', 'Apollo', 'MongoDB', 'TypeGoose', 'RTL', 'Jest']
+    technologies: ['NextJS', 'React', 'Typescript', 'GraphQL', 'Apollo', 'MongoDB', 'TypeGoose', 'RTL', 'Jest'],
+    link: 'https://apps.apple.com/us/app/traverse-mobile-2/id1663934181?platform=iphone'
   },
   {
     name: "eFuse",
@@ -25,7 +27,8 @@ export const employerData: Company[] = [
     description: `Implemented Codegen to automatically generate Types, ensuring type safety from front-end to backend systems, fortifying application's integrity. Spearheaded standardization of unit testing methodologies and mentored junior engineers' ineffective unit testing practices, fostering culture of quality assurance and continuous improvement within team.`,
     bullets: ['Achieved 86% reduction in page load times by implementing industry-leading GraphQL best practices.', 'Rectified 1000+ Typescript errors, enabling activation of Strict Mode to uphold code stability and bolster maintainability across project.', 'Optimized data fetching methods, resulting in substantial decrease in page load time from 6 seconds to under 1 second, enhancing overall\n' +
     'application responsiveness.'],
-    technologies: ['NextJS', 'React', 'Typescript', 'GraphQL', 'Apollo', 'MongoDB', 'TypeGoose', 'RTL', 'Jest']
+    technologies: ['NextJS', 'React', 'Typescript', 'GraphQL', 'Apollo', 'MongoDB', 'TypeGoose', 'RTL', 'Jest'],
+    link: 'https://efuse.gg/'
   },
   {
     name: "Accenture",
@@ -33,7 +36,8 @@ export const employerData: Company[] = [
     src: "/Accenture-Logo.png",
     description: "Developed purchasing flow for United Airlines' onboard WiFi using React, enhancing user experience and facilitating seamless transactions. Led planning and execution of Angular green field project, establishing web portal for Ford Motor Company's employees to access their machine learning toolbox, streamlining internal processes and empowering users.",
     bullets: [`Spearheaded front-end development of purchasing flow for United Airlines' onboard WiFi, ensuring intuitive design and functionality to meet needs of travelers.`, `Designed user-friendly interface for Ford\'s Sales team to access machine learning tools, enabling efficient data-driven decision-making and enhancing productivity within organization.`],
-    technologies: ['React', 'Angular', 'Python', 'Go', 'Java', 'C#']
+    technologies: ['React', 'Angular', 'Python', 'Go', 'Java', 'C#'],
+    link: 'https://www.accenture.com/us-en?c=acn_glb_sembrandpuregoogle_13513493&n=psgs_0323&&c=ad_usadfy17_10000001&n=psgs_Brand-%7C-US-%7C-Exact_accenture'
   },
   {
     name: "NetJets",
@@ -41,7 +45,8 @@ export const employerData: Company[] = [
     src: "/netjets-vector-logo.png",
     description: "Scoped and executed various ServiceNow projects tailored to meet specific needs of internal business users, enhancing operational efficiency and workflow management within organization.",
     bullets: [],
-    technologies: ['Angular', 'ServiceNow']
+    technologies: ['Angular', 'ServiceNow'],
+    link: 'https://netjets.com/en-us/'
   }
 ];
 
