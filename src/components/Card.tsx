@@ -13,7 +13,7 @@ type CardProps = {
 const Card = ({title, subtitle, description, tags, link, bullets}: CardProps) => {
   return (
       <div className={'flex flex-col py-4 px-8 bg-secondary rounded-2xl my-6 lg:w-4/5'}>
-        <div className={'flex flex-row justify-between items-end mb-4'}>
+        <div className={'flex flex-row flex-wrap justify-between items-end mb-4'}>
           {!!link ? (
               <Link href={link} className={'flex flex-row gap-1 items-center'} target={'_blank'}>
                 <p className={'text-2xl'}>{title}</p>

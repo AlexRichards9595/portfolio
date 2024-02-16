@@ -2,11 +2,16 @@
 export interface Company {
   name: string;
   time: string;
-  src: string;
   description: string;
   bullets: string[];
   technologies: string[];
   link?: string;
+  productButtons?: ProductButton[]
+}
+
+interface ProductButton {
+  label: string
+  link: string
 }
 
 
@@ -14,7 +19,6 @@ export const employerData: Company[] = [
   {
     name: "Northwoods",
     time: "2023-present",
-    src: "/efuse.png",
     description: `Implement Dark Mode feature in mobile application using new styling library, ensuring seamless integration and consistent color themes throughout interface. Utilize Styled Components library to enforce uniform styling and facilitate color theming across application codebase.`,
     bullets: ['Enhanced team productivity by 30% through optimizing individual contributions and streamlining work cycles for improved efficiency.', 'Revamped app\'s navigation structure, significantly reducing screen loading time from 20 seconds to less than 1 second, enhancing user experience and overall performance'],
     technologies: ['NextJS', 'React', 'Typescript', 'GraphQL', 'Apollo', 'MongoDB', 'TypeGoose', 'RTL', 'Jest'],
@@ -23,7 +27,6 @@ export const employerData: Company[] = [
   {
     name: "eFuse",
     time: "2022-2023",
-    src: "/efuse.png",
     description: `Implemented Codegen to automatically generate Types, ensuring type safety from front-end to backend systems, fortifying application's integrity. Spearheaded standardization of unit testing methodologies and mentored junior engineers' ineffective unit testing practices, fostering culture of quality assurance and continuous improvement within team.`,
     bullets: ['Achieved 86% reduction in page load times by implementing industry-leading GraphQL best practices.', 'Rectified 1000+ Typescript errors, enabling activation of Strict Mode to uphold code stability and bolster maintainability across project.', 'Optimized data fetching methods, resulting in substantial decrease in page load time from 6 seconds to under 1 second, enhancing overall\n' +
     'application responsiveness.'],
@@ -33,7 +36,6 @@ export const employerData: Company[] = [
   {
     name: "Accenture",
     time: "2019-2022",
-    src: "/Accenture-Logo.png",
     description: "Developed purchasing flow for United Airlines' onboard WiFi using React, enhancing user experience and facilitating seamless transactions. Led planning and execution of Angular green field project, establishing web portal for Ford Motor Company's employees to access their machine learning toolbox, streamlining internal processes and empowering users.",
     bullets: [`Spearheaded front-end development of purchasing flow for United Airlines' onboard WiFi, ensuring intuitive design and functionality to meet needs of travelers.`, `Designed user-friendly interface for Ford\'s Sales team to access machine learning tools, enabling efficient data-driven decision-making and enhancing productivity within organization.`],
     technologies: ['React', 'Angular', 'Python', 'Go', 'Java', 'C#'],
@@ -42,13 +44,41 @@ export const employerData: Company[] = [
   {
     name: "NetJets",
     time: "2018-2019",
-    src: "/netjets-vector-logo.png",
     description: "Scoped and executed various ServiceNow projects tailored to meet specific needs of internal business users, enhancing operational efficiency and workflow management within organization.",
     bullets: [],
     technologies: ['Angular', 'ServiceNow'],
     link: 'https://netjets.com/en-us/'
   }
 ];
+
+export const projectData: Company[] = [
+  {
+    name: "Dwell Community Fellowship",
+    time: "2021",
+    description: `Built the filter sidebar on the Teachings Search site that doesn't force a page load when changing the filters. One of the clients top priorities was that a user could never adjust the filters so that there were no results so the filter bar dynamically adjusts the available filters to only what would still produce search results.`,
+    bullets: [],
+    technologies: ['JavaScript', 'Jest'],
+    link: 'https://www.dwellcc.org/',
+    productButtons: [{label: 'Teaching Search Page', link: 'https://www.dwellcc.org/teachings'}]
+  },
+  {
+    name: "Acacia House Churches",
+    time: "2023",
+    description: `Rapidly prototyped and built and deployed a modern 'business card' website for some friends starting a church in Orlando, FL. The website displays important information about the church and a form that allows users to get in touch.`,
+    bullets: [],
+    technologies: ['NextJS', 'React', 'Typescript', 'RTL', 'Jest'],
+    link: 'https://acaciahc.com/'
+  },
+  {
+    name: "Campscout",
+    time: "2023-present",
+    description: "Currently building a modern web application that allows users to share reviews for specific campsites for all State and National Campgrounds. Too many camping trips have been ruined by picking 'that' campsite. Too many hours have been spent pouring over campground sites and google earth trying to figure out which campsite is the best. Campscout is a site for campers to help fellow campers pick the best sites for the next camping trip",
+    bullets: [],
+    technologies: ['NextJS', 'React', 'Prisma', 'CockroachDB', 'Typescript', 'RTL', 'Jest'],
+    link: 'https://campscout.org/'
+  },
+];
+
 
 export interface ReviewData {
   name: string;
