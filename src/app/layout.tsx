@@ -19,11 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col lg:pt-0 h-screen overflow-x-hidden lg:overflow-y-hidden`}>
+      <body className={`${inter.className} flex`}>
         <Header />
-        <main className={'w-screen grow lg:flex lg:flex-row overflow-y-auto py-8 lg:pb-0'}>
+        <main className={'flex w-screen grow flex-row h-screen overflow-y-auto lg:overflow-y-hidden'}>
           <Sidebar/>
-          <div className={'lg:w-screen lg:overflow-y-auto lg:grow'}>{children}</div>
+          <div className={'lg:w-4/5 lg:overflow-y-auto overflow-x-hidden py-6'}>{children}</div>
         </main>
       </body>
     </html>
