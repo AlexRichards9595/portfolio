@@ -49,7 +49,7 @@ const Reviews = ()=> {
 
 
   return (
-      <div className={"flex flex-col justify-center m-auto h-full lg:h-4/5 lg:w-4/5 w-5/6"}>
+      <div className={"flex flex-col justify-center m-auto mt-12 lg:mt-0 h-full lg:h-4/5 lg:w-4/5 w-5/6"}>
         <div className={"flex flex-col gap-4 h-full lg:h-fit"}>
           <Image className={'lg:h-24 lg:w-24 h-16 w-16'} src={'/icon-start-quote.png'} alt={"Next"} height={100} width={100}/>
           <div className={'h-[450px] lg:h-96'}>
