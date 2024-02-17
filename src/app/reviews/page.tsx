@@ -55,7 +55,7 @@ const Reviews = ()=> {
           <div className={'h-[450px] lg:h-96'}>
             <Review review={reviewData[reviewSelected]}/>
           </div>
-          <Image className={'h-24 w-24 self-end'} src={'/icon-end-quote.png'} alt={"Next"} height={100} width={100}/>
+          <Image className={'lg:h-24 lg:w-24 h-16 w-16 self-end'} src={'/icon-end-quote.png'} alt={"Next"} height={100} width={100}/>
         </div>
         <div className={"flex flex-row w-full justify-center mt-8"}>
           {reviewData.map((review, index) => {
