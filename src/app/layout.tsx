@@ -19,15 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex bg-amber-500 h-screen`}>
-        <div className={'lg:hidden h-screen overflow-y-auto'}>
-          <Header />
-          <div className={'w-full bg-gray-500 pt-6 pb-12'}>{children}</div>
-        </div>
-        <div className={'hidden lg:flex'}>
+      <body className={`${inter.className} flex flex-col h-full lg:h-screen lg:flex-row`}>
+        <Header />
           <Sidebar/>
-          <div className={'lg:w-4/5 bg-gray-500 overflow-y-hidden'}>{children}</div>
-        </div>
+          <div className={'w-full lg:w-4/5 lg:overflow-y-auto'}>{children}</div>
       </body>
     </html>
   );

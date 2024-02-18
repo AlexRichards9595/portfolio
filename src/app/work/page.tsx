@@ -4,7 +4,7 @@ import Image from "next/image";
 import Card from "@/components/Card";
 const Work = ()=> {
   return (
-      <div className="flex flex-row min-h-screen h-fit w-11/12 lg:w-1/2 mx-auto py-12">
+      <div className="flex flex-row min-h-screen h-fit w-11/12 lg:w-1/2 mx-auto">
         <div className={'flex flex-col items-center w-48 min-h-screen h-full mr-4'}>
           <Image src={'/icon-arrow-up.png'} alt={'Arrow'} height={50} width={50}/>
           <span className={'w-[2px] bg-lightest grow'}/>

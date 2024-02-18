@@ -9,7 +9,7 @@ import {useCycle} from "framer-motion";
 const Header = () => {
   const [open, toggleOpen] = useCycle(false, true);
   return (
-      <div className={'h-12 bg-primary absolute top-0 w-screen lg:hidden'}>
+      <div className={'h-12 bg-primary sticky top-0 w-screen z-20 lg:hidden'}>
         <MenuToggle toggle={() => toggleOpen()} open={open}/>
         <Drawer className={'bg-secondary pt-16'} overlay={false} size={600} open={open} placeholder={undefined} placement={"bottom"} onClose={() =>  toggleOpen()}>
           <div className={'flex flex-col items-center pb-8'}>
