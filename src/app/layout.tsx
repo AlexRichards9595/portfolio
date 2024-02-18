@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`${inter.className} flex bg-amber-500 h-screen overflow-hidden`}>
         <div className={'lg:hidden h-screen overflow-y-auto'}>
           <Header />
-          <div className={'w-full bg-gray-500'}>{children}</div>
+          <div className={'w-full bg-gray-500 py-6'}>{children}</div>
         </div>
         <div className={'hidden lg:flex'}>
           <Sidebar/>
