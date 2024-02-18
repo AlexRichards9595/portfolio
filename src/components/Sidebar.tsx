@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Sidebar = () => {
-  return <div className={'hidden lg:flex flex-col items-center h-screen w-1/5 bg-secondary pt-20'}>
+  return <div className={'flex flex-col items-center h-screen w-1/5 bg-secondary pt-20'}>
     <div className={'flex flex-col items-center'}>
       <Image src={'/logo.svg'} className={'w-16 h-16 mb-4'} width={400} height={400} alt={'Logo'}/>
       <p className={'text-3xl text-center'}>Alex Richards</p>
