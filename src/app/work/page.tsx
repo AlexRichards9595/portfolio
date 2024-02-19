@@ -4,13 +4,17 @@ import Image from "next/image";
 import Card from "@/components/Card";
 const Work = ()=> {
   return (
-      <div className="flex flex-row min-h-screen h-fit w-11/12 lg:w-1/2 mx-auto">
-        <div className={'flex flex-col items-center w-48 min-h-screen h-full mr-4'}>
-          <Image src={'/icon-arrow-up.png'} alt={'Arrow'} height={50} width={50}/>
+      <div className="flex flex-col lg:flex-row lg:justify-around w-full lg:h-screen lg:overflow-y-hidden px-4 lg:px-12">
+        <div className={'flex flex-col lg:h-screen lg:w-5/12 text-center justify-center py-4'}>
+          <p className={'text-3xl pb-2'}>My Work</p>
+          <p>This is a section where I give a catching and confident intro into my work and why you should hire me. Please hire me.</p>
+        </div>
+        <div className={'hidden lg:flex flex-col items-center w-12 py-8'}>
+          <Image src={'/icon-arrow-up.png'} className={'h-8 w-8'} alt={'Arrow'} height={50} width={50}/>
           <span className={'w-[2px] bg-lightest grow'}/>
           <span className={'mt-4 bg-lightest h-4 w-4 rounded-full'}/>
         </div>
-        <div className={'flex flex-col h-full py-4 justify-between'}>
+        <div className={'flex flex-col w-full lg:w-5/12 h-full lg:py-12 justify-between items-center overflow-y-auto no-scrollbar'}>
           {employerData.map(company => (
              <Card
                  key={company.name}

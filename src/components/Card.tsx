@@ -12,7 +12,7 @@ type CardProps = {
 }
 const Card = ({title, subtitle, description, tags, link, bullets}: CardProps) => {
   return (
-      <div className={'flex flex-col py-4 px-8 bg-secondary rounded-2xl my-6 lg:w-4/5'}>
+      <div className={'flex flex-col py-4 px-8 bg-secondary rounded-2xl my-6'}>
         <div className={'flex flex-row flex-wrap justify-between items-end mb-4'}>
           {!!link ? (
               <Link href={link} className={'flex flex-row gap-1 items-center'} target={'_blank'}>
@@ -28,7 +28,7 @@ const Card = ({title, subtitle, description, tags, link, bullets}: CardProps) =>
         {bullets && (
             <ul className={'flex flex-col list-disc pl-5 my-3'}>
               {bullets.map(bullet => (
-                  <li key={bullet}>{bullet}</li>
+                  <li key={bullet} className={'my-2'}>{bullet}</li>
               ))}
             </ul>
         )}
