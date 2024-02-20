@@ -51,31 +51,48 @@ export const employerData: Company[] = [
   }
 ];
 
-export const projectData: Company[] = [
+export interface Project {
+  name: string;
+  time: string;
+  description: string;
+  technologies: string[];
+  link?: string;
+  productButtons?: ProductButton[];
+  tab: 'past' | 'present' | 'future'
+}
+
+export const projectData: Project[] = [
   {
     name: "Dwell Community Fellowship",
     time: "2021",
     description: `Built the filter sidebar on the Teachings Search site that doesn't force a page load when changing the filters. One of the clients top priorities was that a user could never adjust the filters so that there were no results so the filter bar dynamically adjusts the available filters to only what would still produce search results.`,
-    bullets: [],
     technologies: ['JavaScript', 'Jest'],
     link: 'https://www.dwellcc.org/',
-    productButtons: [{label: 'Teaching Search Page', link: 'https://www.dwellcc.org/teachings'}]
+    productButtons: [{label: 'Teaching Search Page', link: 'https://www.dwellcc.org/teachings'}],
+    tab: 'past'
   },
   {
     name: "Acacia House Churches",
     time: "2023",
     description: `Rapidly prototyped and built and deployed a modern 'business card' website for some friends starting a church in Orlando, FL. The website displays important information about the church and a form that allows users to get in touch.`,
-    bullets: [],
     technologies: ['NextJS', 'React', 'Typescript', 'RTL', 'Jest'],
-    link: 'https://acaciahc.com/'
+    link: 'https://acaciahc.com/',
+    tab: 'past'
   },
   {
     name: "Campscout",
     time: "2023-present",
     description: "Currently building a modern web application that allows users to share reviews for specific campsites for all State and National Campgrounds. Too many camping trips have been ruined by picking 'that' campsite. Too many hours have been spent pouring over campground sites and google earth trying to figure out which campsite is the best. Campscout is a site for campers to help fellow campers pick the best sites for the next camping trip",
-    bullets: [],
     technologies: ['NextJS', 'React', 'Prisma', 'CockroachDB', 'Typescript', 'RTL', 'Jest'],
-    link: 'https://campscout.org/'
+    link: 'https://campscout.org/',
+    tab: 'present'
+  },
+  {
+    name: "Classmates?",
+    time: "",
+    description: "For most families, faith is a primary source of community and belonging. For most kids, their classmates constitute the vast majority of their social lives. Classmates is the idea of a web application that allows parents to bring these two worlds together by being able to safely and securely connect with parents of their children's classmates that share their same faith background.",
+    technologies: [],
+    tab: 'future'
   },
 ];
 
