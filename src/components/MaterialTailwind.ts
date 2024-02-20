@@ -1,8 +1,8 @@
 'use client'
 
 import {
-    Drawer, Tabs, TabsHeader, TabsBody, TabPanel, Tab
+    Drawer, Tooltip
 } from '@material-tailwind/react'
 
-export { Drawer, Tabs, TabsHeader, TabsBody, TabPanel, Tab
+export { Drawer, Tooltip
 };

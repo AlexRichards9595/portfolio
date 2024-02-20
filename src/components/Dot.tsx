@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 
-
 interface DotProps {
   index: number;
   filled: boolean;

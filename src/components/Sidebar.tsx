@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+import SidebarMenuItem from "@/components/SidebarMenuItem";
 
 const Sidebar = () => {
 
@@ -10,10 +10,10 @@ const Sidebar = () => {
       <p className={'text-lg text-center text-lightest'}>Web Builder | Happy Camper</p>
     </div>
     <div className={'flex flex-col grow justify-center items-center w-full'}>
-      <Link href={'/'} className={'hover:bg-primary w-full p-4 text-center'}><p className={'text-xl'}>Home</p></Link>
-      <Link href={'/work'} className={'hover:bg-primary w-full p-4 text-center'}><p className={'text-xl'}>Work</p></Link>
-      <Link href={'/reviews'} className={'hover:bg-primary w-full p-4 text-center'}><p className={'text-xl'}>Reviews</p></Link>
-      <Link href={'/projects'} className={'hover:bg-primary w-full p-4 text-center'}><p className={'text-xl'}>Projects</p></Link>
+      <SidebarMenuItem route={'/'} label={'Home'} />
+      <SidebarMenuItem route={'/work'} label={'Work'} />
+      <SidebarMenuItem route={'/reviews'} label={'Reviews'} />
+      <SidebarMenuItem route={'/projects'} label={'Projects'} />
     </div>
   </div>
 }

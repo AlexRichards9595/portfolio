@@ -1,6 +1,6 @@
 'use client'
 import {reviewData} from "@/ExperienceData";
-import {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import Review from "@/components/Review";
 import Dot from "@/components/Dot";
 import Image from "next/image";
@@ -49,10 +49,14 @@ const Reviews = ()=> {
 
 
   return (
-      <div className={"flex flex-col justify-center m-auto mt-12 lg:mt-0 h-full lg:h-4/5 lg:w-4/5 w-5/6"}>
+      <div className={"flex flex-col items-center justify-center mx-auto h-full lg:px-12 px-4"}>
+        <div className={'flex flex-col text-center py-4 lg:w-2/3'}>
+          <p className={'text-3xl pb-2'}>Reviews from Coworkers</p>
+          <p>I have had the privilege or working alongside and learning from amazing people over the years and I have worked hard to return the favor. Here is what some of those people have to say about those efforts.</p>
+        </div>
         <div className={"flex flex-col gap-4 h-full lg:h-fit"}>
           <Image className={'lg:h-24 lg:w-24 h-16 w-16'} src={'/icon-start-quote.png'} alt={"Next"} height={100} width={100}/>
-          <div className={'h-[450px] lg:h-96'}>
+          <div className={'h-[400px] lg:h-96'}>
             <Review review={reviewData[reviewSelected]}/>
           </div>
           <Image className={'lg:h-24 lg:w-24 h-16 w-16 self-end'} src={'/icon-end-quote.png'} alt={"Next"} height={100} width={100}/>
