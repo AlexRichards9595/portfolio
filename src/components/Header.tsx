@@ -5,9 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import {MenuToggle} from "@/components/MenuToggle";
 import {useCycle} from "framer-motion";
+import {usePathname} from "next/navigation";
 
 const Header = () => {
   const [open, toggleOpen] = useCycle(false, true);
+  const pathname = usePathname()
+
   return (
       <div className={'h-12 bg-primary sticky top-0 w-screen z-20 lg:hidden'}>
         <MenuToggle toggle={() => toggleOpen()} open={open}/>
@@ -18,10 +21,10 @@ const Header = () => {
             <p className={'text-lg text-center text-lightest'}>Web Builder | Happy Camper</p>
           </div>
           <div className={'flex flex-col grow justify-center items-center w-full'}>
-            <Link href={'/'} onClick={() =>  toggleOpen()} className={'hover:bg-primary w-full p-4 text-center'}><p className={'text-xl'}>Home</p></Link>
-            <Link href={'/work'} onClick={() =>  toggleOpen()} className={'hover:bg-primary w-full p-4 text-center'}><p className={'text-xl'}>Work</p></Link>
-            <Link href={'/reviews'} onClick={() =>  toggleOpen()} className={'hover:bg-primary w-full p-4 text-center'}><p className={'text-xl'}>Reviews</p></Link>
-            <Link href={'/projects'} onClick={() =>  toggleOpen()} className={'hover:bg-primary w-full p-4 text-center'}><p className={'text-xl'}>Projects</p></Link>
+            <Link href={'/'} onClick={() =>  toggleOpen()} className={`hover:bg-primary w-full p-4 text-center ${pathname === '/' && 'underline underline-offset-4'}`}><p className={'text-xl'}>Home</p></Link>
+            <Link href={'/work'} onClick={() =>  toggleOpen()} className={`hover:bg-primary w-full p-4 text-center ${pathname === '/work' && 'underline underline-offset-4'}`}><p className={'text-xl'}>Work</p></Link>
+            <Link href={'/reviews'} onClick={() =>  toggleOpen()} className={`hover:bg-primary w-full p-4 text-center ${pathname === '/reviews' && 'underline underline-offset-4'}`}><p className={'text-xl'}>Reviews</p></Link>
+            <Link href={'/projects'} onClick={() =>  toggleOpen()} className={`hover:bg-primary w-full p-4 text-center ${pathname === '/projects' && 'underline underline-offset-4'}`}><p className={'text-xl'}>Projects</p></Link>
           </div>
         </Drawer>
       </div>
