@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={'flex flex-col items-center lg:pt-8 lg:px-48 w-full h-full overflow-y-auto pb-8'}>
       <Image
-          className={'w-full h-96 lg:h-[600px] object-cover object-top lg:rounded-2xl mb-8'}
+          className={'w-full h-96 lg:h-2/3 object-cover object-top lg:rounded-2xl mb-8'}
           priority={true}
           placeholder={'blur'}
           blurDataURL={'data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAFUlEQVR42mMMtbSsZyACMI4qpK9CACBcDMdIFQKLAAAAAElFTkSuQmCC'}
