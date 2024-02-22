@@ -20,13 +20,13 @@ const Sidebar = () => {
     <div className={'flex flex-row w-full justify-around my-6 px-4'}>
       <CopiableEmail/>
       <Link className={'flex flex-col items-center gap-2 text-center hover:scale-105 ease-in-out transition-all duration-500'} href={'https://www.linkedin.com/in/alexrichards9595/'} target="_blank">
-        <Image className={'h-14 w-14'} src={'/icon-linkedin.png'} alt={'LinkedIn'} width={50} height={50}/>
+        <Image className={'h-14 w-14'} src={'/icon-linkedin.png'} alt={'LinkedIn'} width={50} height={50} priority={true}/>
       </Link>
       <Link className={'flex flex-col items-center gap-2 text-center hover:scale-105 ease-in-out transition-all duration-500'} href={'https://github.com/AlexRichards9595'} target="_blank">
-        <Image className={'h-14 w-14'} src={'/icon-github.png'} alt={'Github'} width={50} height={50}/>
+        <Image className={'h-14 w-14'} src={'/icon-github.png'} alt={'Github'} width={50} height={50} priority={true}/>
       </Link>
       <Link className={'flex flex-col items-center gap-2 text-center hover:scale-105 ease-in-out transition-all duration-500'} download={"Alexander_Richards_Resume.pdf"} href={'/Alexander_Richards_Resume.pdf'}>
-        <Image className={'h-14 w-14'} src={'/icon-download.png'} alt={'Download'} width={50} height={50}/>
+        <Image className={'h-14 w-14'} src={'/icon-download.png'} alt={'Download'} width={50} height={50} priority={true}/>
       </Link>
     </div>
   </div>
