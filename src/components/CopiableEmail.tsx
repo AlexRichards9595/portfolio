@@ -2,6 +2,7 @@
 
 import {useEffect, useState} from "react";
 import {Tooltip} from "@/components/MaterialTailwind";
+import Image from "next/image";
 
 const CopiableEmail = () => {
   const [showToolTip, setShowToolTip] = useState(false)
@@ -17,15 +18,15 @@ const CopiableEmail = () => {
 
   return (
       <Tooltip open={showToolTip} content={'Copied!'} placement={'right-start'}>
-        <p
-            className={'text-lg font-bold cursor-pointer'}
+        <div
+            className={'cursor-pointer hover:scale-105 ease-in-out transition-all duration-500'}
             onClick={async () => {
               setShowToolTip(true)
               await navigator.clipboard.writeText('alex.richards9595@gmail.com')
             }}
         >
-          alex.richards9595@gmail.com
-        </p>
+          <Image className={'h-14 w-14'} src={'/icon-email.png'} alt={'Github'} width={50} height={50}/>
+        </div>
       </Tooltip>
   )
 }
