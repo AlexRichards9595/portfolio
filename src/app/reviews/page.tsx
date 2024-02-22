@@ -19,7 +19,7 @@ const Reviews = ()=> {
   }, [reviewSelected])
 
   useEffect(() => {
-    const timer = setTimeout(() => autoPlay && nextReview(), 4000);
+    const timer = setTimeout(() => autoPlay && nextReview(), 6000);
 
       return () => clearTimeout(timer);
   }, [autoPlay, nextReview]);

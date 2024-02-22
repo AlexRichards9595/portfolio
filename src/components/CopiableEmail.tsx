@@ -25,7 +25,7 @@ const CopiableEmail = () => {
               await navigator.clipboard.writeText('alex.richards9595@gmail.com')
             }}
         >
-          <Image className={'h-14 w-14'} src={'/icon-email.png'} alt={'Github'} width={50} height={50} priority={true}/>
+          <Image className={'h-12 w-12'} src={'/icon-email.png'} alt={'Github'} width={50} height={50} priority={true}/>
         </div>
       </Tooltip>
   )

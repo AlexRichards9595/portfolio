@@ -22,7 +22,7 @@ const SidebarMenuItem: FC<SidebarMenuItemProps> = ({route, label}) => {
                 initial={{ x: -300 }}
                 animate={{ x: 0 }}
                 exit={{ x: -300 }}
-                transition={{ type: "spring" }}
+                transition={{ type: "spring", duration: .5 }}
                 className={`h-[2px] bg-lightest w-1/2 mx-auto`}
             >
             </motion.div>

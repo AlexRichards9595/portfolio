@@ -23,15 +23,15 @@ export default function Home() {
           <p>Email</p>
         </div>
         <Link className={'flex flex-col items-center gap-2 text-center hover:scale-105 ease-in-out transition-all duration-500'} href={'https://www.linkedin.com/in/alexrichards9595/'} target="_blank">
-          <Image src={'/linkedin-icon.png'} alt={'LinkedIn'} width={50} height={50}/>
+          <Image className={'h-12 w-12'} src={'/linkedin-icon.png'} alt={'LinkedIn'} width={50} height={50}/>
           <p>LinkedIn</p>
         </Link>
         <Link className={'flex flex-col items-center gap-2 text-center hover:scale-105 ease-in-out transition-all duration-500'} href={'https://github.com/AlexRichards9595'} target="_blank">
-          <Image src={'/github-icon.png'} alt={'Github'} width={50} height={50}/>
+          <Image className={'h-12 w-12'} src={'/github-icon.png'} alt={'Github'} width={50} height={50}/>
           <p>Github</p>
         </Link>
         <Link className={'flex flex-col items-center gap-2 text-center hover:scale-105 ease-in-out transition-all duration-500'} download={"Alexander_Richards_Resume.pdf"} href={'/Alexander_Richards_Resume.pdf'}>
-          <Image src={'/download-icon.png'} alt={'Download'} width={50} height={50}/>
+          <Image className={'h-12 w-12'} src={'/download-icon.png'} alt={'Download'} width={50} height={50}/>
           <p>Resume</p>
         </Link>
       </div>
