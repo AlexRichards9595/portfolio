@@ -26,14 +26,14 @@ const Projects = ()=> {
     });
   };
   return <div className="flex flex-col min-h-screen lg:pt-36 lg:w-1/2 mx-auto px-4">
-    <div className={'flex flex-col text-center justify-center py-4'}>
-      <p className={'text-3xl pb-2'}>Projects</p>
-      <p>This is a section where I give a catching and confident intro into my work and why you should hire me. Please hire me.</p>
+    <div className={'flex flex-col text-center justify-center py-4 lg:mb-8'}>
+      <p className={'text-3xl pb-2'}>Personal Projects</p>
+      <p>Sometimes you build things for the pure love of the game. Here are some projects that I did to help out some friends or solve some of my own problems.</p>
     </div>
     <div className={'flex flex-col relative'}>
     <div className={'flex flex-row w-full justify-around py-2'}>
       {tabs.map((tab, index) => (
-          <div className={'text-lg'}
+          <div className={'text-lg cursor-pointer'}
               key={index}
               onClick={() => handleClick(index)}
           >

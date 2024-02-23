@@ -81,7 +81,7 @@ export const projectData: Project[] = [
   },
   {
     name: "Campscout",
-    time: "2023-present",
+    time: "Under Construction",
     description: "Currently building a modern web application that allows users to share reviews for specific campsites for all State and National Campgrounds. Too many camping trips have been ruined by picking 'that' campsite. Too many hours have been spent pouring over campground sites and google earth trying to figure out which campsite is the best. Campscout is a site for campers to help fellow campers pick the best sites for the next camping trip",
     technologies: ['NextJS', 'React', 'Prisma', 'CockroachDB', 'Typescript', 'RTL', 'Jest'],
     link: 'https://campscout.org/',
@@ -89,8 +89,8 @@ export const projectData: Project[] = [
   },
   {
     name: "Classmates?",
-    time: "",
-    description: "For most families, faith is a primary source of community and belonging. For most kids, their classmates constitute the vast majority of their social lives. Classmates is the idea of a web application that allows parents to bring these two worlds together by being able to safely and securely connect with parents of their children's classmates that share their same faith background.",
+    time: "Maybe Sometime",
+    description: "For most families, faith is a primary source of community and belonging. For most kids, their classmates constitute the vast majority of their social lives. Classmates is the idea of a web application that allows parents to bring these two worlds together by being able to safely and securely connect with parents of their children's classmates with the same faith background.",
     technologies: [],
     tab: 'future'
   },
