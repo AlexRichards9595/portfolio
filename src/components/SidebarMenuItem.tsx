@@ -12,7 +12,7 @@ type SidebarMenuItemProps = {
 const SidebarMenuItem: FC<SidebarMenuItemProps> = ({route, label}) => {
   const pathname = usePathname()
   return (
-    <Link href={route} className={'hover:bg-primary w-full p-4 text-center'}>
+    <Link href={route} className={'hover:bg-primary w-3/4 rounded-full p-4 text-center'}>
       <p className={`text-xl`}>
         {label}
       </p>

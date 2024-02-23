@@ -15,7 +15,7 @@ export default function Home() {
           height={600}
           alt={'Landing Image'}
       />
-      <p className={'text-lg px-4 lg:px-0 lg:w-4/5 text-center'}>My name is Alex Richards and I like travelling more than working. But when I do work, I love building beautiful and valuable web and mobile applications. I am pretty good at it too. Feel free to
+      <p className={'text-xl px-4 lg:px-0 lg:w-4/5 text-center'}>My name is Alex Richards and I like travelling more than working. But when I do work, I love building beautiful and valuable web and mobile applications. I am pretty good at it too. Feel free to
        poke around and see for yourself.</p>
       <div className={'lg:hidden flex flex-row w-96 justify-between mt-12 mb-6 px-4'}>
         <div className={'flex flex-col items-center gap-2 text-center'}>
