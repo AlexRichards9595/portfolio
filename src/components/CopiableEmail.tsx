@@ -22,7 +22,7 @@ const CopiableEmail = () => {
             className={'cursor-pointer hover:scale-105 ease-in-out transition-all duration-500'}
             onClick={async () => {
               setShowToolTip(true)
-              await navigator.clipboard.writeText('alex.richards9595@gmail.com')
+              await navigator.clipboard.writeText('hello@alexrichards.dev')
             }}
         >
           <Image className={'h-12 w-12'} src={'/icon-email.png'} alt={'Github'} width={50} height={50} priority={true}/>
