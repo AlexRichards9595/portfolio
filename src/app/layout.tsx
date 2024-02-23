@@ -10,7 +10,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Alex Richards",
   description: "Web Builder | Happy Camper",
-  metadataBase: new URL('https://alexrichards.dev')
 };
 
 export default function RootLayout({
