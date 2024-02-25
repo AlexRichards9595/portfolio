@@ -4,8 +4,8 @@ import Image from "next/image";
 import Card from "@/components/Card";
 const Work = ()=> {
   return (
-      <div className="flex flex-col lg:flex-row lg:justify-around w-full lg:h-screen lg:overflow-y-hidden px-4 lg:px-12">
-        <div className={'flex flex-col lg:h-screen lg:w-5/12 text-center justify-center py-4'}>
+      <div className="flex flex-col lg:flex-row lg:justify-around w-full lg:h-full lg:overflow-y-hidden px-4">
+        <div className={'flex flex-col lg:w-5/12 text-center justify-center py-4'}>
           <p className={'text-3xl pb-2'}>Work Experience</p>
           <p>From private jets to social services, I have enjoyed working at some incredible companies building elegant mobile and web applications that help solve real world problems for real world people.</p>
         </div>

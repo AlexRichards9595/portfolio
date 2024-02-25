@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`${inter.className} flex flex-col h-full lg:h-screen lg:flex-row`}>
         <Header />
           <Sidebar/>
-          <div className={'w-full lg:w-4/5 lg:overflow-y-auto'}>{children}</div>
+          <div className={'w-full lg:w-4/5 lg:overflow-y-auto py-6 lg:py-12'}>{children}</div>
       </body>
     </html>
   );

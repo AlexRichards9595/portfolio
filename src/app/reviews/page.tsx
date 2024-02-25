@@ -49,7 +49,7 @@ const Reviews = ()=> {
 
 
   return (
-      <div className={"flex flex-col items-center justify-center mx-auto h-full lg:px-12 px-4"}>
+      <div className={"flex flex-col items-center justify-center mx-auto h-full lg:w-4/5 px-4"}>
         <div className={'flex flex-col text-center py-4 lg:w-2/3'}>
           <p className={'text-3xl pb-2'}>Reviews from Coworkers</p>
           <p>I have had the privilege or working alongside and learning from amazing people over the years and I have worked hard to return the favor. Here is what some of those people have to say about those efforts.</p>

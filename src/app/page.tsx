@@ -4,7 +4,7 @@ import CopiableEmail from "@/components/CopiableEmail";
 
 export default function Home() {
   return (
-    <div className={'flex flex-col items-center lg:pt-8 lg:px-48 w-full h-full overflow-y-auto pb-8'}>
+    <div className={'flex flex-col items-center lg:px-48 w-full h-full overflow-y-auto pb-8'}>
       <Image
           className={'w-full h-96 lg:h-2/3 object-cover object-top lg:rounded-2xl mb-8'}
           priority={true}
@@ -23,15 +23,15 @@ export default function Home() {
           <p>Email</p>
         </div>
         <Link className={'flex flex-col items-center gap-2 text-center hover:scale-105 ease-in-out transition-all duration-500'} href={'https://www.linkedin.com/in/alexrichards9595/'} target="_blank">
-          <Image className={'h-12 w-12'} src={'/linkedin-icon.png'} alt={'LinkedIn'} width={50} height={50}/>
+          <Image className={'h-12 w-12'} src={'/icon-linkedin.png'} alt={'LinkedIn'} width={50} height={50}/>
           <p>LinkedIn</p>
         </Link>
         <Link className={'flex flex-col items-center gap-2 text-center hover:scale-105 ease-in-out transition-all duration-500'} href={'https://github.com/AlexRichards9595'} target="_blank">
-          <Image className={'h-12 w-12'} src={'/github-icon.png'} alt={'Github'} width={50} height={50}/>
+          <Image className={'h-12 w-12'} src={'/icon-github.png'} alt={'Github'} width={50} height={50}/>
           <p>Github</p>
         </Link>
         <Link className={'flex flex-col items-center gap-2 text-center hover:scale-105 ease-in-out transition-all duration-500'} download={"Alexander_Richards_Resume.pdf"} href={'/Alexander_Richards_Resume.pdf'}>
-          <Image className={'h-12 w-12'} src={'/download-icon.png'} alt={'Download'} width={50} height={50}/>
+          <Image className={'h-12 w-12'} src={'/icon-download.png'} alt={'Download'} width={50} height={50}/>
           <p>Resume</p>
         </Link>
       </div>
