@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: "Privacy policy for the Holler app.",
 };
 
-const SUPPORT_EMAIL = "you@example.com"; // <-- set your public contact email
+const SUPPORT_EMAIL = "alex.richards9595@gmail.com"; // <-- set your public contact email
 const LAST_UPDATED = "August 13, 2026";
 
 export default function HollerPrivacyPage() {
