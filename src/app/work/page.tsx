@@ -1,34 +1,34 @@
-import {employerData} from "@/ExperienceData";
+import { employerData } from "@/ExperienceData";
 import React from "react";
-import Image from "next/image";
 import Card from "@/components/Card";
-const Work = ()=> {
+
+export default function Work() {
   return (
-      <div className="flex flex-col lg:flex-row lg:justify-around w-full lg:h-full lg:overflow-y-hidden px-4">
-        <div className={'flex flex-col lg:w-5/12 text-center justify-center py-4'}>
-          <p className={'text-3xl pb-2'}>Work Experience</p>
-          <p>From private jets to social services, I have enjoyed working at some incredible companies building elegant mobile and web applications that help solve real world problems for real world people.</p>
-        </div>
-        <div className={'hidden lg:flex flex-col items-center w-12 py-8'}>
-          <Image src={'/icon-arrow-up.png'} className={'h-8 w-8'} alt={'Arrow'} height={50} width={50}/>
-          <span className={'w-[2px] bg-lightest grow'}/>
-          <span className={'mt-4 bg-lightest h-4 w-4 rounded-full'}/>
-        </div>
-        <div className={'flex flex-col w-full lg:w-5/12 h-full lg:py-12 justify-between items-center overflow-y-auto no-scrollbar'}>
-          {employerData.map(company => (
-             <Card
-                 key={company.name}
-                 title={company.name}
-                 description={company.description}
-                 subtitle={company.time}
-                 tags={company.technologies}
-                 link={company.link}
-                 bullets={company.bullets}
-             />
-          ))}
+    <div className="mx-auto flex max-w-5xl flex-col gap-8 px-6 py-10 lg:flex-row lg:gap-12 lg:py-16">
+      <div className="lg:sticky lg:top-16 lg:w-2/5 lg:self-start">
+        <div className="text-center lg:text-left">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-grape">Experience</p>
+          <h1 className="mt-2 font-display text-4xl text-ink lg:text-5xl">Where I&rsquo;ve worked</h1>
+          <p className="mt-4 text-ink/70 lg:max-w-sm">
+            From private jets to social services, I&rsquo;ve built elegant web and mobile applications
+            that solve real problems for real people — at some incredible companies.
+          </p>
         </div>
       </div>
+
+      <div className="flex flex-col gap-6 lg:w-3/5">
+        {employerData.map((company) => (
+          <Card
+            key={company.name}
+            title={company.name}
+            description={company.description}
+            subtitle={company.time}
+            tags={company.technologies}
+            link={company.link}
+            bullets={company.bullets}
+          />
+        ))}
+      </div>
+    </div>
   );
 }
-
-export default Work

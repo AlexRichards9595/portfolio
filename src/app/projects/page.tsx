@@ -1,74 +1,77 @@
 'use client'
 
-import { projectData} from "@/ExperienceData";
+import { projectData } from "@/ExperienceData";
 import Card from "@/components/Card";
-import {AnimatePresence, motion, useAnimation} from "framer-motion";
-import React, {useState} from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
 
 const tabs = [
-  {value: 'past', label: 'Past'},
-  {value: 'present', label: 'Present'},
-  {value: 'future', label: 'Future'}
-]
+  { value: "past", label: "Past" },
+  { value: "present", label: "Present" },
+  { value: "future", label: "Future" },
+] as const;
 
-const Projects = ()=> {
-  const [activeTab, setActiveTab] = useState(1);
-  const controls = useAnimation();
+export default function Projects() {
+  const [active, setActive] = useState(1);
+  const list = projectData.filter((p) => p.tab === tabs[active].value);
 
-  const handleClick = (index:number) => {
-    setActiveTab(index);
-    animateUnderline(index);
-  };
+  return (
+    <div className="mx-auto flex max-w-3xl flex-col px-5 py-10 lg:py-16">
+      <header className="text-center">
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-grape">Personal Projects</p>
+        <h1 className="mt-2 font-display text-4xl text-ink lg:text-5xl">Built for the love of it</h1>
+        <p className="mx-auto mt-3 max-w-xl text-ink/70">
+          Sometimes you build things for the pure love of the game — to help out some friends, or
+          to solve one of my own problems.
+        </p>
+      </header>
 
-  const animateUnderline = (index: number) => {
-    controls.start({
-      left: `calc(${index * (100 / tabs.length)}%)`,
-    });
-  };
-  return <div className="flex flex-col lg:w-1/2 mx-auto px-4">
-    <div className={'flex flex-col text-center justify-center py-4 lg:mb-8'}>
-      <p className={'text-3xl pb-2'}>Personal Projects</p>
-      <p>Sometimes you build things for the pure love of the game. Here are some projects that I did to help out some friends or solve some of my own problems.</p>
-    </div>
-    <div className={'flex flex-col relative'}>
-    <div className={'flex flex-row w-full justify-around py-2'}>
-      {tabs.map((tab, index) => (
-          <div className={'text-lg cursor-pointer'}
-              key={index}
-              onClick={() => handleClick(index)}
+      <div className="mx-auto mt-8 flex rounded-full border border-line bg-paper p-1 shadow-soft">
+        {tabs.map((tab, i) => (
+          <button
+            key={tab.value}
+            onClick={() => setActive(i)}
+            className={`relative z-10 rounded-full px-6 py-2 text-sm font-medium transition-colors ${
+              active === i ? "text-white" : "text-muted hover:text-ink"
+            }`}
           >
+            {active === i && (
+              <motion.span
+                layoutId="proj-tab"
+                className="absolute inset-0 -z-10 rounded-full bg-plum"
+                transition={{ type: "spring", stiffness: 400, damping: 34 }}
+              />
+            )}
             {tab.label}
-          </div>
-      ))}
-    </div>
-      <motion.div
-          className={`h-1 bg-lightest w-1/3 absolute bottom-0`}
-          initial={{ left: `${(100 / tabs.length) * activeTab}%` }}
-          animate={controls}
-      />
-    </div>
-    <div className={'flex flex-col h-full justify-between'}>
-      {projectData.filter(x => x.tab === tabs[activeTab].value).map(project => (
-          <AnimatePresence mode={'popLayout'} key={project.name}>
+          </button>
+        ))}
+      </div>
+
+      <div className="mt-8 flex flex-col gap-5">
+        <AnimatePresence mode="popLayout">
+          {list.map((project) => (
             <motion.div
-                key={project.name}
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                transition={{ type: "spring" }}
+              key={project.name}
+              layout
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
               <Card
-                  title={project.name}
-                  description={project.description}
-                  subtitle={project.time}
-                  tags={project.technologies}
-                  link={project.link}
+                title={project.name}
+                description={project.description}
+                subtitle={project.time}
+                tags={project.technologies}
+                {...(project.slug ? { to: `/projects/${project.slug}` } : { link: project.link })}
               />
             </motion.div>
-          </AnimatePresence>
-      ))}
+          ))}
+        </AnimatePresence>
+        {list.length === 0 && (
+          <p className="py-16 text-center text-muted">Nothing here yet — check back soon.</p>
+        )}
+      </div>
     </div>
-  </div>
+  );
 }
-
-export default Projects

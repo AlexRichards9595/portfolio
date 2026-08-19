@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
 interface DotProps {
   index: number;
@@ -6,15 +6,15 @@ interface DotProps {
   onClick: (selected: number) => void;
 }
 
-const Dot: FC<DotProps> = ({filled, onClick, index}) => {
-  const commonStyles = "w-4 h-4 rounded-full mx-2"
-  if (filled) {
-    return <span className={`${commonStyles} bg-white`} onClick={() => onClick(index)} />
-  }
-
-  return (
-      <span className={`${commonStyles} border-white border-2`} onClick={() => onClick(index)} />
-  );
-}
+const Dot: FC<DotProps> = ({ filled, onClick, index }) => (
+  <button
+    type="button"
+    onClick={() => onClick(index)}
+    aria-label={`Go to review ${index + 1}`}
+    className={`h-2.5 rounded-full transition-all duration-300 ${
+      filled ? "w-6 bg-plum" : "w-2.5 bg-plum/25 hover:bg-plum/40"
+    }`}
+  />
+);
 
 export default Dot;

@@ -59,6 +59,8 @@ export interface Project {
   link?: string;
   productButtons?: ProductButton[];
   tab: 'past' | 'present' | 'future'
+  /** When set, the project links to a branded detail page at /projects/{slug}. */
+  slug?: string
 }
 
 export const projectData: Project[] = [
@@ -85,6 +87,16 @@ export const projectData: Project[] = [
     description: "Currently building a modern web application that allows users to share reviews for specific campsites for all State and National Campgrounds. Too many camping trips have been ruined by picking 'that' campsite. Too many hours have been spent pouring over campground sites and google earth trying to figure out which campsite is the best. Campscout is a site for campers to help fellow campers pick the best sites for the next camping trip",
     technologies: ['NextJS', 'React', 'Prisma', 'CockroachDB', 'Typescript', 'RTL', 'Jest'],
     link: 'https://campscout.org/',
+    slug: 'campscout',
+    tab: 'present'
+  },
+  {
+    name: "Holler",
+    time: "2026",
+    description: "A private, friends-only app for sharing when you're free and turning that into real plans — no public feed, just the people you actually know. Built with React Native & Expo on a Supabase backend with row-level security, real-time chat, privacy-preserving contact discovery (salted hashes), and email / Apple / Google sign-in. Currently in App Store review.",
+    technologies: ['React Native', 'Expo', 'TypeScript', 'Supabase', 'PostgreSQL'],
+    link: 'https://alexrichards.dev/holler',
+    slug: 'holler',
     tab: 'present'
   },
   {
