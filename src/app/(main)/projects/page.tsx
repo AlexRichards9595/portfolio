@@ -17,28 +17,33 @@ export default function Projects() {
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col px-5 py-10 lg:py-16">
-      <header className="text-center">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-grape">Personal Projects</p>
-        <h1 className="mt-2 font-display text-4xl text-ink lg:text-5xl">Built for the love of it</h1>
-        <p className="mx-auto mt-3 max-w-xl text-ink/70">
-          Sometimes you build things for the pure love of the game — to help out some friends, or
-          to solve one of my own problems.
+      <motion.header
+        initial={{ opacity: 0, y: 14 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="text-center"
+      >
+        <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">{"// personal projects"}</p>
+        <h1 className="mt-2 font-display text-4xl text-cream lg:text-5xl">Built for the love of it</h1>
+        <p className="mx-auto mt-3 max-w-xl text-cream/70">
+          Sometimes you build things for the pure love of the game — to help out some friends, or to
+          solve one of my own problems.
         </p>
-      </header>
+      </motion.header>
 
-      <div className="mx-auto mt-8 flex rounded-full border border-line bg-paper p-1 shadow-soft">
+      <div className="mx-auto mt-8 flex rounded-full border border-light/50 bg-deep/50 p-1">
         {tabs.map((tab, i) => (
           <button
             key={tab.value}
             onClick={() => setActive(i)}
             className={`relative z-10 rounded-full px-6 py-2 text-sm font-medium transition-colors ${
-              active === i ? "text-white" : "text-muted hover:text-ink"
+              active === i ? "text-deep" : "text-lightest hover:text-cream"
             }`}
           >
             {active === i && (
               <motion.span
                 layoutId="proj-tab"
-                className="absolute inset-0 -z-10 rounded-full bg-plum"
+                className="absolute inset-0 -z-10 rounded-full bg-accent"
                 transition={{ type: "spring", stiffness: 400, damping: 34 }}
               />
             )}
@@ -53,7 +58,7 @@ export default function Projects() {
             <motion.div
               key={project.name}
               layout
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
@@ -69,7 +74,7 @@ export default function Projects() {
           ))}
         </AnimatePresence>
         {list.length === 0 && (
-          <p className="py-16 text-center text-muted">Nothing here yet — check back soon.</p>
+          <p className="py-16 text-center text-lightest">Nothing here yet — check back soon.</p>
         )}
       </div>
     </div>

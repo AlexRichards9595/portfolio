@@ -12,7 +12,7 @@ const Dot: FC<DotProps> = ({ filled, onClick, index }) => (
     onClick={() => onClick(index)}
     aria-label={`Go to review ${index + 1}`}
     className={`h-2.5 rounded-full transition-all duration-300 ${
-      filled ? "w-6 bg-plum" : "w-2.5 bg-plum/25 hover:bg-plum/40"
+      filled ? "w-6 bg-accent" : "w-2.5 bg-lightest/30 hover:bg-lightest/50"
     }`}
   />
 );

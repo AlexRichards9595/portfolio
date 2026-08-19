@@ -65,12 +65,13 @@ export interface Project {
 
 export const projectData: Project[] = [
   {
-    name: "Dwell Community Fellowship",
+    name: "Dwell Community Church",
     time: "2021",
     description: `Built the filter sidebar on the Teachings Search site that doesn't force a page load when changing the filters. One of the clients top priorities was that a user could never adjust the filters so that there were no results so the filter bar dynamically adjusts the available filters to only what would still produce search results.`,
     technologies: ['JavaScript', 'Jest'],
     link: 'https://www.dwellcc.org/',
     productButtons: [{label: 'Teaching Search Page', link: 'https://www.dwellcc.org/teachings'}],
+    slug: 'dwell',
     tab: 'past'
   },
   {
@@ -79,6 +80,7 @@ export const projectData: Project[] = [
     description: `Rapidly prototyped and built and deployed a modern 'business card' website for some friends starting a church in Orlando, FL. The website displays important information about the church and a form that allows users to get in touch.`,
     technologies: ['NextJS', 'React', 'Typescript', 'RTL', 'Jest'],
     link: 'https://acaciahc.com/',
+    slug: 'acacia',
     tab: 'past'
   },
   {

@@ -9,40 +9,44 @@ const config: Config = withMT({
   theme: {
     extend: {
       colors: {
-        // ── Cream + plum system ─────────────────────────────────────────────
-        cream: "#F4ECE0", // page background — warm cream
-        paper: "#FFFCF7", // elevated surfaces / cards
-        ink: "#2A1A33", // primary text — deep plum-black
-        muted: "#6E5D77", // secondary text — mauve-gray
-        line: "#E7DBCB", // hairline borders on cream
-        plum: {
-          DEFAULT: "#4A2B5C", // deep plum — dark surfaces (sidebar)
-          deep: "#34203F", // deeper plum
-          mid: "#603A75", // plum hover / mid
-        },
-        grape: {
-          DEFAULT: "#9A4DBB", // vibrant accent — links, highlights
-          soft: "#EEE1F6", // accent tint background
-        },
-        gold: "#C99A46", // warm secondary micro-accent
-
-        // ── Back-compat aliases (old token names → new palette) ──────────────
-        primary: "#34203F",
-        secondary: "#4A2B5C",
-        light: "#603A75",
-        lightest: "#C7ADD6",
+        // ── Original drenched plum/brown scheme ─────────────────────────────
+        primary: "#472D2D", // drench base
+        secondary: "#553939", // raised surfaces / cards
+        light: "#704F4F", // borders / hover
+        lightest: "#A77979", // muted rose text
+        accent: "#7FB7BE", // teal accent
+        // additions that stay in the family
+        deep: "#2E1C1C", // deepest — sidebar / wells
+        cream: "#F4E7DF", // high-contrast headings / display text
       },
       fontFamily: {
         sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
         display: ["var(--font-fraunces)", "ui-serif", "Georgia", "serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       boxShadow: {
-        soft: "0 2px 8px rgba(42,26,51,0.06), 0 12px 32px -12px rgba(42,26,51,0.12)",
-        lift: "0 6px 18px rgba(42,26,51,0.10), 0 24px 56px -18px rgba(42,26,51,0.24)",
+        drench: "0 10px 30px -12px rgba(0,0,0,0.5)",
+        lift: "0 18px 48px -18px rgba(0,0,0,0.6)",
+        glow: "0 0 0 1px rgba(127,183,190,0.25), 0 12px 40px -12px rgba(127,183,190,0.35)",
       },
-      borderRadius: {
-        "2xl": "1.125rem",
-        "3xl": "1.5rem",
+      keyframes: {
+        "fade-up": {
+          "0%": { opacity: "0", transform: "translateY(14px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        "pulse-glow": {
+          "0%,100%": { opacity: "0.5" },
+          "50%": { opacity: "0.9" },
+        },
+      },
+      animation: {
+        "fade-up": "fade-up 0.7s cubic-bezier(0.22,1,0.36,1) both",
+        marquee: "marquee 26s linear infinite",
+        "pulse-glow": "pulse-glow 4s ease-in-out infinite",
       },
     },
   },

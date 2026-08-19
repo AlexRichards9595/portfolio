@@ -17,17 +17,16 @@ const links = [
 const Header = () => {
   const [open, toggleOpen] = useCycle(false, true);
   const pathname = usePathname();
-
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
-    <div className="h-14 bg-plum-deep plum-glow sticky top-0 w-screen z-20 lg:hidden flex items-center">
+    <div className="h-14 bg-deep sticky top-0 w-screen z-20 lg:hidden flex items-center border-b border-white/5">
       <MenuToggle toggle={() => toggleOpen()} open={open} />
       <Link href="/" className="font-display text-xl text-cream absolute left-1/2 -translate-x-1/2">
         Alex Richards
       </Link>
       <Drawer
-        className="bg-plum-deep plum-glow pt-16"
+        className="bg-deep aura pt-16"
         overlay={false}
         size={520}
         open={open}
@@ -40,7 +39,7 @@ const Header = () => {
             <Image src={"/logo.svg"} className="w-12 h-12" width={400} height={400} alt={"Logo"} />
           </div>
           <p className="font-display text-3xl text-center text-cream">Alex Richards</p>
-          <p className="mt-1 text-sm tracking-wide uppercase text-lightest/80">Web Builder · Happy Camper</p>
+          <p className="mt-2 font-mono text-[11px] uppercase tracking-[0.18em] text-lightest">Web &amp; Mobile Builder</p>
         </div>
         <div className="flex flex-col items-center w-full gap-1 px-6">
           {links.map((l) => (
