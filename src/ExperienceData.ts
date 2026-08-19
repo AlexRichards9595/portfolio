@@ -19,7 +19,7 @@ export const employerData: Company[] = [
   {
     name: "Tail Light (Bouncie)",
     time: "2024-present",
-    description: `Build features end-to-end for Bouncie, a connected-car platform drivers and fleets use to track vehicles, manage who can access them, and stay on top of maintenance. Most of my work is front-end with React, Redux, and Next.js, but I design and build the APIs, message publishing, and asynchronous jobs a feature needs when it spans the stack. As the most senior engineer on the team after our tech lead, I pioneer many of our architectural decisions and regularly shape product design.`,
+    description: `Build features end-to-end for Bouncie, a connected-car platform drivers and fleets use to track vehicles, manage who can access them, and stay on top of maintenance. Most of my work is front-end with React, Redux, and Next.js, but I design and build the APIs, message publishing, and asynchronous jobs a feature needs when it spans the stack. I drive many of the team's architectural decisions and regularly help shape product direction and design.`,
     bullets: [
       'Designed and shipped user management end-to-end — a complex, permission-based system controlling who can access which vehicles — across the React/Redux front end, backend APIs, and asynchronous jobs that copy notification and geofence settings between vehicles.',
       'Built the Vehicle Care feature, giving fleet managers a single place to track vehicle maintenance and repairs.',
