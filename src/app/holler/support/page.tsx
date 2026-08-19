@@ -30,8 +30,10 @@ export default function HollerSupportPage() {
         <h2>Common questions</h2>
         <ul>
           <li>
-            <strong>How do I sign in?</strong> Holler uses your phone number.
-            Enter it, then type the one-time code we text you.
+            <strong>How do I sign in?</strong> Use your email and a password, or
+            tap <strong>Sign in with Apple</strong> or{" "}
+            <strong>Continue with Google</strong>. Adding a phone number is
+            optional and only helps friends find you.
           </li>
           <li>
             <strong>How do I add friends?</strong> From your contacts, by phone

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 };
 
 const SUPPORT_EMAIL = "alex.richards9595@gmail.com"; // <-- set your public contact email
-const LAST_UPDATED = "August 13, 2026";
+const LAST_UPDATED = "August 18, 2026";
 
 export default function HollerPrivacyPage() {
   return (
@@ -30,9 +30,17 @@ export default function HollerPrivacyPage() {
         <h2>What we collect</h2>
         <ul>
           <li>
-            <strong>Phone number.</strong> Used as your sign-in and your
-            identity on Holler. Verification codes are sent by SMS through our
-            provider (Twilio).
+            <strong>Email address.</strong> Used as your sign-in and to identify
+            your account. You can sign in with an email and password, or with{" "}
+            <strong>Sign in with Apple</strong> or <strong>Google</strong>, in
+            which case we receive the email address and name they provide (with
+            Apple this may be a private relay address).
+          </li>
+          <li>
+            <strong>Phone number (optional).</strong> You can add a phone number
+            so friends who already have it saved can find you on Holler. It is
+            never shown to other users, and you can turn discovery off entirely.
+            Holler no longer uses SMS or phone numbers to sign in.
           </li>
           <li>
             <strong>Profile.</strong> Your first/last name and, optionally, a
@@ -40,9 +48,10 @@ export default function HollerPrivacyPage() {
           </li>
           <li>
             <strong>Contacts (hashed only).</strong> If you use &ldquo;Find
-            friends from contacts,&rdquo; your device converts each phone number
-            to a one-way, salted <strong>SHA-256 hash</strong> and sends only
-            those hashes to match against people already on Holler.{" "}
+            friends from contacts,&rdquo; your device converts each phone number{" "}
+            <em>and email address</em> to a one-way, salted{" "}
+            <strong>SHA-256 hash</strong> and sends only those hashes to match
+            against people already on Holler.{" "}
             <strong>
               Your address book is never uploaded in readable form and is not
               stored.
@@ -75,7 +84,7 @@ export default function HollerPrivacyPage() {
 
         <h2>How we use it</h2>
         <ul>
-          <li>To let you sign in and be recognized by friends (phone, name, photo).</li>
+          <li>To let you sign in (email, Apple, or Google) and be recognized by friends (name, photo).</li>
           <li>To help you find friends already on Holler (hashed contact matching).</li>
           <li>
             To show your availability <strong>only</strong> to the people and
@@ -96,8 +105,8 @@ export default function HollerPrivacyPage() {
         <h2>Service providers</h2>
         <p>
           We use a small number of processors strictly to run the app:{" "}
-          <strong>Supabase</strong> (secure database, storage, and hosting),{" "}
-          <strong>Twilio</strong> (sends your SMS verification code),{" "}
+          <strong>Supabase</strong> (secure database, storage, authentication,
+          and hosting), <strong>Apple and Google</strong> (optional sign-in),{" "}
           <strong>Google Places</strong> (location search — your query is proxied
           through our server so the API key never touches your device), and{" "}
           <strong>Apple/Google/Expo</strong> push services (deliver
@@ -133,8 +142,8 @@ export default function HollerPrivacyPage() {
         <h2>Security</h2>
         <p>
           Data is protected in transit and at rest. Access is enforced at the
-          database level (row-level security), and contact numbers are only ever
-          handled as salted hashes for matching.
+          database level (row-level security), and contact phone numbers and
+          emails are only ever handled as salted hashes for matching.
         </p>
 
         <h2>Children</h2>
