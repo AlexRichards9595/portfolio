@@ -17,11 +17,16 @@ interface ProductButton {
 
 export const employerData: Company[] = [
   {
-    name: "Tail Light",
+    name: "Tail Light (Bouncie)",
     time: "2024-present",
-    description: `Build mobile and web features for Bouncie, a connected-car platform that gives drivers real-time GPS location, trip history, driving insights, and vehicle health alerts.`,
-    bullets: [],
-    technologies: ['React Native', 'React', 'TypeScript'],
+    description: `Build features end-to-end for Bouncie, a connected-car platform drivers and fleets use to track vehicles, manage who can access them, and stay on top of maintenance. Most of my work is front-end with React, Redux, and Next.js, but I design and build the APIs, message publishing, and asynchronous jobs a feature needs when it spans the stack. As the most senior engineer on the team after our tech lead, I pioneer many of our architectural decisions and regularly shape product design.`,
+    bullets: [
+      'Designed and shipped user management end-to-end — a complex, permission-based system controlling who can access which vehicles — across the React/Redux front end, backend APIs, and asynchronous jobs that copy notification and geofence settings between vehicles.',
+      'Built the Vehicle Care feature, giving fleet managers a single place to track vehicle maintenance and repairs.',
+      'Added bulk export of notification settings across vehicles, backing the long-running geofence copy with an asynchronous job to keep the UI fast and responsive.',
+      'Currently modernizing the company’s public marketing site, Bouncie.com.',
+    ],
+    technologies: ['React', 'Redux', 'Next.js', 'TypeScript', 'Node.js', 'REST APIs'],
     link: 'https://www.bouncie.com/'
   },
   {
