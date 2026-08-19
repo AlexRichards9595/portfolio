@@ -63,14 +63,14 @@ export const projectDetails: Record<string, ProjectDetailProps> = {
 
   acacia: {
     theme: {
-      bg: "#16211F",
-      panel: "#20302D",
-      text: "#F7F6F2",
-      muted: "#B9C4BC",
-      accent: "#C6AC57",
-      onAccent: "#16211F",
-      border: "rgba(247,246,242,0.12)",
-      glow: "rgba(196,224,210,0.14)",
+      bg: "#F4F0E7",
+      panel: "#FBF8F1",
+      text: "#3C5B62",
+      muted: "#5E8188",
+      accent: "#5E888F",
+      onAccent: "#F7F4ED",
+      border: "rgba(60,91,98,0.16)",
+      glow: "rgba(150,190,180,0.20)",
     },
     eyebrow: "Personal Project · 2023",
     name: "Acacia House Churches",
