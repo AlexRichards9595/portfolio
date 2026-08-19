@@ -11,7 +11,7 @@ const stack = [
 ];
 const stats: [string, string][] = [
   ["8+", "Years building"],
-  ["4", "Companies"],
+  ["5", "Companies"],
   ["5", "Personal projects"],
 ];
 

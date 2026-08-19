@@ -90,14 +90,14 @@ export const projectDetails: Record<string, ProjectDetailProps> = {
 
   dwell: {
     theme: {
-      bg: "#F6F7F9",
-      panel: "#FFFFFF",
-      text: "#1B2A45",
-      muted: "#5A6A82",
-      accent: "#2F4C86",
-      onAccent: "#FFFFFF",
-      border: "rgba(27,42,69,0.12)",
-      glow: "rgba(47,76,134,0.10)",
+      bg: "#0C2A24",
+      panel: "#123A32",
+      text: "#F1F6F1",
+      muted: "#A6BDB2",
+      accent: "#67C82E",
+      onAccent: "#0C2A24",
+      border: "rgba(241,246,241,0.12)",
+      glow: "rgba(103,200,46,0.18)",
     },
     eyebrow: "Client Work · 2021",
     name: "Dwell Community Church",
