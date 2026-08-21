@@ -21,15 +21,23 @@ export const metadata: Metadata = {
  * white on the dark theme. */
 function GymmieMark({ className = "", style }: { className?: string; style?: React.CSSProperties }) {
   return (
-    <svg viewBox="0 0 104 128" className={className} style={style} fill="none" stroke="currentColor" strokeWidth="13" strokeLinecap="round" aria-hidden>
-      {/* lower loop (descender) */}
-      <circle cx="52" cy="80" r="27" />
-      {/* upper loop (bowl) — drawn in front */}
-      <circle cx="52" cy="46" r="27" />
-      {/* weave: short arc of the lower loop redrawn on top of the bowl at the right crossing */}
-      <path d="M66 56.6 A27 27 0 0 1 78 71.7" />
-      {/* ear: a short hook growing smoothly out of the top-right of the bowl */}
-      <path d="M72 33 q15 -5 13 11" />
+    <svg viewBox="0 0 108 150" className={className} style={style} aria-hidden>
+      <defs>
+        {/* The two counters (holes), offset in opposite directions so the waist
+            between them reads as the S-spine of a lowercase g. */}
+        <mask id="gymmie-g" maskUnits="userSpaceOnUse" x="0" y="0" width="108" height="150">
+          <rect width="108" height="150" fill="white" />
+          <circle cx="45" cy="47" r="16" fill="black" />
+          <circle cx="61" cy="106" r="17" fill="black" />
+        </mask>
+      </defs>
+      <g fill="currentColor" mask="url(#gymmie-g)">
+        {/* bowl + descender loops overlap into one solid ribbon */}
+        <circle cx="52" cy="49" r="33" />
+        <circle cx="54" cy="104" r="34" />
+        {/* ear — a rounded nub blending out of the top-right of the bowl */}
+        <circle cx="83" cy="31" r="12" />
+      </g>
     </svg>
   );
 }
