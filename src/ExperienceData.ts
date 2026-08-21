@@ -115,6 +115,14 @@ export const projectData: Project[] = [
     tab: 'present'
   },
   {
+    name: "Gymmie",
+    time: "Concept",
+    description: "A workout tracker so good you'd use it alone — with a social network built around actually training. Log workouts, track progress, share PRs, follow friends, swap programs, and train from your phone, Watch, or voice. Simple by default, flexible when you need it.",
+    technologies: ['Product Concept', 'iOS', 'watchOS', 'Social'],
+    slug: 'gymmie',
+    tab: 'future'
+  },
+  {
     name: "Classmates?",
     time: "Maybe Sometime",
     description: "For most families, faith is a primary source of community and belonging. For most kids, their classmates constitute the vast majority of their social lives. Classmates is the idea of a web application that allows parents to bring these two worlds together by being able to safely and securely connect with parents of their children's classmates with the same faith background.",
