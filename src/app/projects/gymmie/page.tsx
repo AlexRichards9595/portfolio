@@ -15,12 +15,33 @@ export const metadata: Metadata = {
     "Gymmie is a workout tracker so good you'd use it alone, connected to your friends so training becomes social. A premium product concept.",
 };
 
-/* ── Brand logo ─────────────────────────────────────────────────────────────
- * The source PNG (public/gymmie-logo.png) is the black lockup; `invert` renders
- * it white on the dark theme. A transparent-background PNG looks cleanest. */
+/* ── Brand mark ──────────────────────────────────────────────────────────────
+ * A lowercase g built from two interlocking (woven) chain links, with the ear
+ * hooking out of the top-right of the bowl. Uses currentColor so it renders
+ * white on the dark theme. */
+function GymmieMark({ className = "", style }: { className?: string; style?: React.CSSProperties }) {
+  return (
+    <svg viewBox="0 0 104 128" className={className} style={style} fill="none" stroke="currentColor" strokeWidth="13" strokeLinecap="round" aria-hidden>
+      {/* lower loop (descender) */}
+      <circle cx="52" cy="80" r="27" />
+      {/* upper loop (bowl) — drawn in front */}
+      <circle cx="52" cy="46" r="27" />
+      {/* weave: short arc of the lower loop redrawn on top of the bowl at the right crossing */}
+      <path d="M66 56.6 A27 27 0 0 1 78 71.7" />
+      {/* ear: a short hook growing smoothly out of the top-right of the bowl */}
+      <path d="M72 33 q15 -5 13 11" />
+    </svg>
+  );
+}
+
+/** Lockup that scales as one unit — control the size with a text-* class. */
 function GymmieLogo({ className = "" }: { className?: string }) {
-  // eslint-disable-next-line @next/next/no-img-element
-  return <img src="/gymmie-logo.png" alt="gymmie" className={`w-auto select-none invert ${className}`} />;
+  return (
+    <span className={`inline-flex items-center gap-[0.32em] leading-none ${className}`}>
+      <GymmieMark className="w-auto" style={{ height: "1.15em" }} />
+      <span className="font-semibold lowercase tracking-[-0.03em]">gymmie</span>
+    </span>
+  );
 }
 
 /* ── Device frames ─────────────────────────────────────────────────────────── */
@@ -83,7 +104,7 @@ export default function GymmieConcept() {
       {/* Top bar */}
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#0E0E0E]/85 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          <GymmieLogo className="h-7" />
+          <GymmieLogo className="text-2xl" />
           <div className="flex items-center gap-5">
             <span className="hidden text-sm text-[#8A8A85] sm:inline">Product concept</span>
             <Link
@@ -100,7 +121,7 @@ export default function GymmieConcept() {
       <section className="bg-[#0E0E0E]">
         <div className="mx-auto max-w-6xl px-6 pb-10 pt-16 lg:pt-24">
           <Reveal>
-            <GymmieLogo className="h-11" />
+            <GymmieLogo className="text-3xl" />
             <h1 className="mt-8 max-w-4xl text-[2.6rem] font-semibold leading-[1.05] tracking-[-0.035em] sm:text-6xl lg:text-7xl">
               Your workout.
               <br />
@@ -1135,7 +1156,9 @@ export default function GymmieConcept() {
       {/* 23 · FINAL VISION */}
       <Section bg="deep" className="text-center">
         <Reveal>
-          <GymmieLogo className="mx-auto h-14" />
+          <div className="flex justify-center">
+            <GymmieLogo className="text-5xl" />
+          </div>
           <h2 className="mt-8 text-3xl font-semibold tracking-tight sm:text-5xl">
             Working out is better together.
           </h2>
@@ -1153,7 +1176,9 @@ export default function GymmieConcept() {
           <p className="mt-8 text-xl font-semibold text-[#F7F7F5]">
             Your workout. Your progress. Your people.
           </p>
-          <GymmieLogo className="mx-auto mt-10 h-9" />
+          <div className="mt-10 flex justify-center">
+            <GymmieLogo className="text-3xl" />
+          </div>
         </Reveal>
 
         <div className="mt-16 border-t border-white/10 pt-8">
