@@ -694,6 +694,79 @@ export default function GymmieConcept() {
         </div>
       </Section>
 
+      {/* 9.5 · DEPTH FEATURES */}
+      <Section bg="deep">
+        <Reveal>
+          <Eyebrow>The details that compound</Eyebrow>
+          <h2 className="mt-4 max-w-3xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+            Depth without the clutter.
+          </h2>
+          <p className="mt-4 max-w-2xl text-[#C4C4BF]">
+            The small things a serious lifter feels every session — each one hidden until it&rsquo;s
+            useful, none of them in your way.
+          </p>
+        </Reveal>
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            [
+              "Live Activity rest timer",
+              "Rest counts down on your Lock Screen and Dynamic Island, with a Watch tap when it’s time. Pocket the phone.",
+            ],
+            [
+              "Plate calculator",
+              "Tap the weight to see exactly which plates go on each side — no mental math mid-set.",
+            ],
+            [
+              "Auto warm-up sets",
+              "Gymmie ramps warm-ups from your working weight, so you start heavy without the guesswork.",
+            ],
+            [
+              "Ghost / pace mode",
+              "See how today stacks up against your last time through this workout, set by set, live.",
+            ],
+            [
+              "Notes that resurface",
+              "“Felt easy — go up” comes back on your next set, not buried in history.",
+            ],
+            [
+              "Stall detection",
+              "When a lift stalls, Gymmie nudges a deload or small auto-regulation — before you plateau.",
+            ],
+            [
+              "Bodyweight, measurements & photos",
+              "Track weight, measurements, and private progress photos alongside your lifts.",
+            ],
+            [
+              "Apple Health, both ways",
+              "Write workouts and heart rate to Health; read your bodyweight back in.",
+            ],
+            [
+              "Home & Lock Screen widgets",
+              "Next workout, weekly volume, and your streak — a glance from anywhere.",
+            ],
+            [
+              "Bring your history",
+              "Import from Strong, Hevy, or a screenshot. Your logs come with you.",
+            ],
+            [
+              "Equipment profiles",
+              "Home rack or commercial gym — Gymmie subs exercises to what you actually have.",
+            ],
+            [
+              "Training-now presence",
+              "See when a friend is mid-workout and cheer them on live.",
+            ],
+          ].map(([t, d], i) => (
+            <Reveal key={t as string} delay={(i % 3) * 0.05}>
+              <Card className="h-full">
+                <p className="font-semibold">{t}</p>
+                <p className="mt-2 text-sm text-[#8A8A85]">{d}</p>
+              </Card>
+            </Reveal>
+          ))}
+        </div>
+      </Section>
+
       {/* 10 · PRs & PROGRESS (gold) */}
       <Section>
         <Reveal>
