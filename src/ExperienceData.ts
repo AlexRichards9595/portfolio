@@ -33,7 +33,7 @@ export const employerData: Company[] = [
     name: "Northwoods",
     time: "2023-2024",
     description: `Implement Dark Mode feature in mobile application using new styling library, ensuring seamless integration and consistent color themes throughout interface. Utilize Styled Components library to enforce uniform styling and facilitate color theming across application codebase.`,
-    bullets: ['Enhanced team productivity by 30% through optimizing individual contributions and streamlining work cycles for improved efficiency.', 'Revamped app\'s navigation structure, significantly reducing screen loading time from 20 seconds to less than 1 second, enhancing user experience and overall performance'],
+    bullets: ['Revamped app\'s navigation structure, significantly reducing screen loading time from 20 seconds to less than 1 second, enhancing user experience and overall performance'],
     technologies: ['NextJS', 'React', 'Typescript', 'GraphQL', 'Apollo', 'MongoDB', 'TypeGoose', 'RTL', 'Jest'],
     link: 'https://apps.apple.com/us/app/traverse-mobile-2/id1663934181?platform=iphone'
   },
