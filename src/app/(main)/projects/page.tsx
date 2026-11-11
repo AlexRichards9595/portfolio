@@ -1,19 +1,19 @@
 'use client'
 
-import { projectData } from "@/ExperienceData";
+import { projectData, type Project } from "@/ExperienceData";
 import Card from "@/components/Card";
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 
+// Each tab lists its project groups in display order (current work first).
 const tabs = [
-  { value: "past", label: "Past" },
-  { value: "present", label: "Present" },
-  { value: "future", label: "Future" },
-] as const;
+  { value: "wild", label: "In the Wild", groups: ["present", "past"] },
+  { value: "pipeline", label: "In the Pipeline", groups: ["future"] },
+] as const satisfies readonly { value: string; label: string; groups: readonly Project["tab"][] }[];
 
 export default function Projects() {
-  const [active, setActive] = useState(1);
-  const list = projectData.filter((p) => p.tab === tabs[active].value);
+  const [active, setActive] = useState(0);
+  const list = tabs[active].groups.flatMap((group) => projectData.filter((p) => p.tab === group));
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col px-5 py-10 lg:py-16">
