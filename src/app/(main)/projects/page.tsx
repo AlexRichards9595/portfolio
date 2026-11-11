@@ -8,7 +8,7 @@ import React, { useState } from "react";
 // Each tab lists its project groups in display order (current work first).
 const tabs = [
   { value: "wild", label: "In the Wild", groups: ["present", "past"] },
-  { value: "pipeline", label: "In the Pipeline", groups: ["future"] },
+  { value: "works", label: "In the Works", groups: ["future"] },
 ] as const satisfies readonly { value: string; label: string; groups: readonly Project["tab"][] }[];
 
 export default function Projects() {
