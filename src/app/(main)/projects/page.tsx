@@ -26,7 +26,7 @@ export default function Projects() {
         <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">{"// personal projects"}</p>
         <h1 className="mt-2 font-display text-4xl text-cream lg:text-5xl">Built for the love of it</h1>
         <p className="mx-auto mt-3 max-w-xl text-cream/70">
-          Sometimes you build things for the pure love of the game — to help out some friends, or to
+          Sometimes I build things for the pure love of the game — to help out some friends, or to
           solve one of my own problems.
         </p>
       </motion.header>
