@@ -56,3 +56,44 @@
     scrollbar-width: none;
   }
 }
+
+/* ── Page wipe (route transitions) ─────────────────────────────────────────── */
+.page-wipe {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
+  background: var(--wipe, #472d2d);
+  transform: translateY(100%);
+  transition: transform 0.75s cubic-bezier(0.76, 0, 0.24, 1);
+}
+.page-wipe::before,
+.page-wipe::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--wipe-accent, #7fb7be);
+}
+.page-wipe::before { top: 0; }
+.page-wipe::after { bottom: 0; }
+.page-wipe[data-state="cover"] { transform: translateY(0); pointer-events: auto; }
+.page-wipe[data-state="out"] { transform: translateY(-100%); }
+.page-wipe.notrans { transition: none; }
+
+/* ── Animatable theme variables (projects brand flood) ─────────────────────── */
+@property --pf-fg { syntax: "<color>"; inherits: true; initial-value: #f4e7df; }
+@property --pf-muted { syntax: "<color>"; inherits: true; initial-value: #a77979; }
+@property --pf-acc { syntax: "<color>"; inherits: true; initial-value: #7fb7be; }
+@property --pf-onacc { syntax: "<color>"; inherits: true; initial-value: #2e1c1c; }
+@property --pf-panel { syntax: "<color>"; inherits: true; initial-value: #553939; }
+@property --pf-line { syntax: "<color>"; inherits: true; initial-value: rgba(167, 121, 121, 0.45); }
+
+@keyframes scroll-drip {
+  0% { transform: scaleY(0); opacity: 1; }
+  60% { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0; }
+}

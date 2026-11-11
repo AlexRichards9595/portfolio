@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
+import PageWipe from "@/components/motion/PageWipe";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const fraunces = Fraunces({
@@ -19,10 +20,18 @@ export const metadata: Metadata = {
     "Alex Richards is a software engineer with 8 years of experience building beautiful, valuable web and mobile applications. Portfolio, work history, and projects.",
 };
 
+export const viewport: Viewport = {
+  themeColor: "#2E1C1C",
+  viewportFit: "cover",
+};
+
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable} ${mono.variable}`}>
-      <body className="font-sans bg-primary text-cream">{children}</body>
+      <body className="font-sans bg-primary text-cream">
+        {children}
+        <PageWipe />
+      </body>
     </html>
   );
 }

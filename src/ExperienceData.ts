@@ -2,6 +2,14 @@
 export interface Company {
   name: string;
   time: string;
+  /** Job title, shown in the Work flythrough. */
+  role: string;
+  /** First year at the company; drives the rolling year counter. */
+  startYear: number;
+  /** One headline number for the flythrough panel. */
+  stat: { value: string; label: string };
+  /** Short bullets that fit the flythrough panel (the full `bullets` stay for the list view). */
+  highlights: string[];
   description: string;
   bullets: string[];
   technologies: string[];
@@ -19,6 +27,14 @@ export const employerData: Company[] = [
   {
     name: "Tail Light (Bouncie)",
     time: "2024-present",
+    role: "Senior Software Engineer",
+    startYear: 2024,
+    stat: { value: "End to end", label: "Features across React/Redux, APIs, messaging & async jobs" },
+    highlights: [
+      "Designed and shipped permission-based user management for vehicle access.",
+      "Built Vehicle Care for fleet maintenance and repairs.",
+      "Modernizing Bouncie.com, the public marketing site.",
+    ],
     description: `Build features end-to-end for Bouncie, a connected-car platform drivers and fleets use to track vehicles, manage who can access them, and stay on top of maintenance. Most of my work is front-end with React, Redux, and Next.js, but I design and build the APIs, message publishing, and asynchronous jobs a feature needs when it spans the stack. I drive many of the team's architectural decisions and regularly help shape product direction and design.`,
     bullets: [
       'Designed and shipped user management end-to-end — a complex, permission-based system controlling who can access which vehicles — across the React/Redux front end, backend APIs, and asynchronous jobs that copy notification and geofence settings between vehicles.',
@@ -32,6 +48,13 @@ export const employerData: Company[] = [
   {
     name: "Northwoods",
     time: "2023-2024",
+    role: "Senior Developer",
+    startYear: 2023,
+    stat: { value: "20s → <1s", label: "Screen load time after rebuilding app navigation" },
+    highlights: [
+      "Rebuilt the mobile app's navigation structure.",
+      "Shipped Dark Mode with Styled Components theming across the codebase.",
+    ],
     description: `Implement Dark Mode feature in mobile application using new styling library, ensuring seamless integration and consistent color themes throughout interface. Utilize Styled Components library to enforce uniform styling and facilitate color theming across application codebase.`,
     bullets: ['Revamped app\'s navigation structure, significantly reducing screen loading time from 20 seconds to less than 1 second, enhancing user experience and overall performance'],
     technologies: ['NextJS', 'React', 'Typescript', 'GraphQL', 'Apollo', 'MongoDB', 'TypeGoose', 'RTL', 'Jest'],
@@ -40,6 +63,14 @@ export const employerData: Company[] = [
   {
     name: "eFuse",
     time: "2022-2023",
+    role: "Senior Software Engineer",
+    startYear: 2022,
+    stat: { value: "−86%", label: "Page load time, after reworking GraphQL data fetching" },
+    highlights: [
+      "Fixed 1,000+ TypeScript errors to turn on strict mode.",
+      "Introduced Codegen for end-to-end type safety.",
+      "Standardized unit testing and mentored junior engineers.",
+    ],
     description: `Implemented Codegen to automatically generate Types, ensuring type safety from front-end to backend systems, fortifying application's integrity. Spearheaded standardization of unit testing methodologies and mentored junior engineers' ineffective unit testing practices, fostering culture of quality assurance and continuous improvement within team.`,
     bullets: ['Achieved 86% reduction in page load times by implementing industry-leading GraphQL best practices.', 'Rectified 1000+ Typescript errors, enabling activation of Strict Mode to uphold code stability and bolster maintainability across project.', 'Optimized data fetching methods, resulting in substantial decrease in page load time from 6 seconds to under 1 second, enhancing overall\n' +
     'application responsiveness.'],
@@ -49,6 +80,13 @@ export const employerData: Company[] = [
   {
     name: "Accenture",
     time: "2019-2022",
+    role: "Software Engineer",
+    startYear: 2019,
+    stat: { value: "2", label: "Fortune 500 clients: United Airlines & Ford" },
+    highlights: [
+      "Led front-end development of United Airlines' onboard Wi-Fi purchase flow in React.",
+      "Led a greenfield Angular portal for Ford's machine learning toolbox.",
+    ],
     description: "Developed purchasing flow for United Airlines' onboard WiFi using React, enhancing user experience and facilitating seamless transactions. Led planning and execution of Angular green field project, establishing web portal for Ford Motor Company's employees to access their machine learning toolbox, streamlining internal processes and empowering users.",
     bullets: [`Spearheaded front-end development of purchasing flow for United Airlines' onboard WiFi, ensuring intuitive design and functionality to meet needs of travelers.`, `Designed user-friendly interface for Ford\'s Sales team to access machine learning tools, enabling efficient data-driven decision-making and enhancing productivity within organization.`],
     technologies: ['React', 'Angular', 'Python', 'Go', 'Java', 'C#'],
@@ -57,6 +95,13 @@ export const employerData: Company[] = [
   {
     name: "NetJets",
     time: "2018-2019",
+    role: "Associate ServiceNow Developer",
+    startYear: 2018,
+    stat: { value: "ServiceNow", label: "Projects scoped and shipped for internal business teams" },
+    highlights: [
+      "Scoped and delivered ServiceNow projects tailored to internal business users.",
+      "Improved operational efficiency and workflow management.",
+    ],
     description: "Scoped and executed various ServiceNow projects tailored to meet specific needs of internal business users, enhancing operational efficiency and workflow management within organization.",
     bullets: [],
     technologies: ['Angular', 'ServiceNow'],
@@ -137,6 +182,8 @@ export interface ReviewData {
   role: string;
   time: string;
   review: string;
+  /** A verbatim phrase from the review, shown as the large pull quote. */
+  highlight: string;
 }
 
 export const reviewData: ReviewData[] = [
@@ -144,18 +191,21 @@ export const reviewData: ReviewData[] = [
     name: "Bo",
     role: "Manager",
     time: "October, 2023",
+    highlight: "Alex is a really good teammate and brings his A game",
     review: `Alex is a really good teammate and brings his A game ready to work and help where ever he can.  Alex is able to adapt very well and is not afraid to ask question and also to voice his ideas.`
   },
   {
     name: "Julie",
     role: "Delivery Lead",
     time: "June, 2020",
+    highlight: "I'd work on any team with Alex!",
     review: `I've worked with Alex for over a year now on three different teams. Each time I start a new project, l'm excited to see that Alex is on my team. Alex creates his own leadership opportunities on a team by stepping up and jumping right in. He asks the right questions at the right time, to help understand the problem we are trying to solve. Alex proactively does things to help his team, whether it be writing cards in Jira, reaching out to the Product Owner to review an approach or solution or jumping in to help problem solve. Alex has an easy-going personality that helps motivate team members and relieve team stress. We've been on some stressful projects together, but never once did I see Alex give up. Alex should know his teams appreciate him more than he may know and always let his personality shine. I'd work on any team with Alex!`
   },
   {
     name: "Tyler",
     role: "Software Engineer",
     time: "June, 2020",
+    highlight: "an egoless communicator and team member",
     review: `I have worked with Alex for over a year on two projects. When pairing with Alex, I appreciate that he is an egoless communicator and team member, is consistent in his approach, and stays focused on delivering value to clients, not just code. He has kept me many times from going down rabbit holes and losing focus on the long-term goal. He also shows care for the quality of the product he is building, especially when it comes to a user's experience on the front-end.
 Alex's willingness to take on new tasks was made evident on a recent project when we had to create a 3D model of a physical space using software tools unlike any we had any familiarity with. Alex volunteered for the challenge. and learned and delivered quickly without complaint.
 As an artisan. Alex has a knack for helping on the delivery side. I have seen multiple instances where he stepped up to help or stand in for our Delivery Lead, by reviewing and refining story cards, keeping story boards up to date. and tracking sprint metrics. This has helped keep our team organized and moving.`
@@ -164,6 +214,7 @@ As an artisan. Alex has a knack for helping on the delivery side. I have seen mu
     name: "Dan",
     role: "Software Engineer",
     time: "June, 2020",
+    highlight: "stepped up to help or stand in for our Delivery Lead",
     review: `I have worked with Alex for over a year delivery side. I have seen multiple instances where he stepped up to help or stand in for our Delivery Lead, by reviewing and refining story cards, keeping story boards up to date. and tracking sprint metrics. This has helped keep our team organized and moving.`
   }
 ]

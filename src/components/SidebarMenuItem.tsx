@@ -29,7 +29,7 @@ const SidebarMenuItem: FC<SidebarMenuItemProps> = ({ route, label, index }) => {
         {active && (
           <motion.span
             layoutId="side-active"
-            className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-full bg-accent"
+            className="absolute inset-y-0 left-0 my-auto h-6 w-1 rounded-full bg-accent"
             transition={{ type: "spring", stiffness: 500, damping: 40 }}
           />
         )}
