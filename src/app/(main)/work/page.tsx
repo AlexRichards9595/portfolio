@@ -11,7 +11,7 @@ const chronological = [...employerData].reverse();
 
 const WorkFlythrough = dynamic(() => import("@/components/work/WorkFlythrough"), {
   ssr: false,
-  loading: () => <div className="h-[100svh] bg-deep lg:h-screen" />,
+  loading: () => <div className="h-[100dvh] bg-deep lg:h-screen" />,
 });
 
 /** Static card list — used when the visitor prefers reduced motion. */

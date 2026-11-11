@@ -13,8 +13,8 @@ const tagline = "I build beautiful, valuable web & mobile apps — from fleet to
 
 export default function InkHero() {
   return (
-    <section className="relative h-[100svh] min-h-[560px] overflow-hidden bg-deep lg:h-screen">
-      <InkCanvas />
+    <section className="relative h-[100dvh] min-h-[480px] overflow-hidden bg-deep lg:h-screen">
+      <InkCanvas count={7500} />
       <h1 className="sr-only">Alex Richards — software engineer</h1>
 
       <div className="pointer-events-none absolute inset-x-0 bottom-0 flex flex-col items-center px-6 pb-[calc(3rem+env(safe-area-inset-bottom))] text-center lg:bottom-auto lg:top-[58%] lg:pb-0">

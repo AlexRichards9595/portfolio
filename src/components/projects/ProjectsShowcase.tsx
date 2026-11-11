@@ -142,7 +142,7 @@ export default function ProjectsShowcase() {
     >
       <div ref={floodRef} aria-hidden className="pointer-events-none fixed bottom-0 left-0 right-0 top-0 z-0 lg:left-[20%] lg:top-0" />
 
-      <div className="relative z-10 mx-auto flex h-[100svh] min-h-[600px] max-w-6xl flex-col gap-4 px-5 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-6 lg:grid lg:h-screen lg:min-h-0 lg:grid-cols-[1.1fr_1fr] lg:grid-rows-[auto_minmax(0,1fr)] lg:gap-x-12 lg:gap-y-6 lg:py-10">
+      <div className="relative z-10 mx-auto flex h-[100dvh] min-h-[520px] max-w-6xl flex-col gap-4 px-5 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-6 lg:grid lg:h-screen lg:min-h-0 lg:grid-cols-[1.1fr_1fr] lg:grid-rows-[auto_minmax(0,1fr)] lg:gap-x-12 lg:gap-y-6 lg:py-10">
         {/* Copy */}
         <header className="lg:col-start-2 lg:row-start-1">
           <p className="pr-14 pt-2 font-mono text-[11px] uppercase tracking-[0.25em] text-[color:var(--pf-acc)] lg:pr-0 lg:pt-0 lg:text-xs">{"// personal projects"}</p>

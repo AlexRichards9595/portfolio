@@ -239,7 +239,7 @@ export default function WorkFlythrough({ jobs }: { jobs: Company[] }) {
   const job = shown >= 0 ? jobs[shown] : null;
 
   return (
-    <div ref={hostRef} className="relative h-[100svh] min-h-[560px] touch-none select-none overflow-hidden bg-deep lg:h-screen">
+    <div ref={hostRef} className="relative h-[100dvh] min-h-[480px] touch-none select-none overflow-hidden bg-deep lg:h-screen">
       <canvas ref={canvasRef} aria-hidden className="absolute inset-0 h-full w-full" />
       <div className="absolute left-0 top-0 z-20 h-0.5 bg-accent shadow-[0_0_10px_#7FB7BE]" style={{ width: `${progress * 100}%` }} />
 

@@ -26,7 +26,7 @@ function ReviewText({ review }: { review: ReviewData }) {
 function ReviewSection({ review, index, total }: { review: ReviewData; index: number; total: number }) {
   const words = `“${review.highlight}”`.split(" ");
   return (
-    <div className="flex min-h-[85svh] flex-col justify-center py-16 lg:min-h-screen">
+    <div className="flex min-h-[85dvh] flex-col justify-center py-16 lg:min-h-screen">
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -183,7 +183,7 @@ export default function Reviews() {
         <section
           ref={(el) => { sections.current[0] = el; }}
           data-index={-1}
-          className="pointer-events-none flex min-h-[100svh] flex-col items-center justify-start pb-16 pt-[46svh] text-center lg:min-h-screen lg:pt-[45vh]"
+          className="pointer-events-none flex min-h-[100dvh] flex-col items-center justify-start pb-16 pt-[46dvh] text-center lg:min-h-screen lg:pt-[45vh]"
         >
           <motion.div initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease, delay: 0.4 }}>
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-accent">{"// kind words"}</p>
